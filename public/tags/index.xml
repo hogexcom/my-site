@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on My Site</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on My Site</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vite</title>
+      <link>http://localhost:1313/tags/vite/</link>
+      <pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate>
+      <guid>http://localhost:1313/tags/vite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Audio API</title>
+      <link>http://localhost:1313/tags/web-audio-api/</link>
+      <pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate>
+      <guid>http://localhost:1313/tags/web-audio-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>フラクタル</title>
+      <link>http://localhost:1313/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</link>
+      <pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>音楽</title>
+      <link>http://localhost:1313/tags/%E9%9F%B3%E6%A5%BD/</link>
+      <pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%E9%9F%B3%E6%A5%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/tags/markdown/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate>
+      <guid>http://localhost:1313/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>http://localhost:1313/tags/tips/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate>
+      <guid>http://localhost:1313/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>執筆</title>
+      <link>http://localhost:1313/tags/%E5%9F%B7%E7%AD%86/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9F%B7%E7%AD%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webサイト</title>
+      <link>http://localhost:1313/tags/web%E3%82%B5%E3%82%A4%E3%83%88/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/web%E3%82%B5%E3%82%A4%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>静的サイト</title>
+      <link>http://localhost:1313/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88/</link>
+      <pubDate>Sun, 30 Nov 2025 13:08:40 +0900</pubDate>
+      <guid>http://localhost:1313/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

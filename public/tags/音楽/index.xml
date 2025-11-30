@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>音楽 on My Site</title>
+    <link>http://localhost:1313/tags/%E9%9F%B3%E6%A5%BD/</link>
+    <description>Recent content in 音楽 on My Site</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%9F%B3%E6%A5%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>フラクタル音楽生成アプリを作りました</title>
+      <link>http://localhost:1313/posts/fractal-music-app/</link>
+      <pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate>
+      <guid>http://localhost:1313/posts/fractal-music-app/</guid>
+      <description>&lt;h2 id=&#34;フラクタル音楽生成アプリ&#34;&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
+&lt;p&gt;フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/fractal-music/&#34;&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;フラクタル音楽とは&#34;&gt;フラクタル音楽とは&lt;/h2&gt;
+&lt;p&gt;フラクタル音楽は、自己相似性を持つ数学的パターンを音楽に応用したものです。自然界に存在するフラクタル構造（海岸線、雲、木の枝など）のように、音楽にも様々なスケールで同じパターンが繰り返される特徴を持たせることができます。&lt;/p&gt;
+&lt;h2 id=&#34;フーリエフィルタリング法&#34;&gt;フーリエフィルタリング法&lt;/h2&gt;
+&lt;p&gt;このアプリでは、フーリエフィルタリング法を用いてフラクタルな音響信号を生成しています。&lt;/p&gt;
+&lt;h3 id=&#34;仕組み&#34;&gt;仕組み&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;周波数領域での生成&lt;/strong&gt;: 音のスペクトルをフラクタルパターンで構築&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;逆フーリエ変換&lt;/strong&gt;: 周波数領域から時間領域へ変換&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音響合成&lt;/strong&gt;: Web Audio APIを使用してリアルタイムに再生&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;この手法により、自然でありながら予測不可能な、興味深い音楽パターンが生成されます。&lt;/p&gt;
+&lt;h2 id=&#34;技術スタック&#34;&gt;技術スタック&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vite&lt;/strong&gt; - 高速なビルドツール&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web Audio API&lt;/strong&gt; - ブラウザでの音響処理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript&lt;/strong&gt; - フラクタルアルゴリズムの実装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;特徴&#34;&gt;特徴&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ブラウザ上で完結する軽量アプリケーション&lt;/li&gt;
+&lt;li&gt;リアルタイムでフラクタル音楽を生成・再生&lt;/li&gt;
+&lt;li&gt;パラメータ調整による多様な音色の探索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使い方&#34;&gt;使い方&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/fractal-music/&#34;&gt;アプリページ&lt;/a&gt;にアクセス&lt;/li&gt;
+&lt;li&gt;パラメータを調整（必要に応じて）&lt;/li&gt;
+&lt;li&gt;生成ボタンをクリック&lt;/li&gt;
+&lt;li&gt;フラクタル音楽をお楽しみください！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;数学と音楽の融合により、新しい音楽体験を提供するアプリケーションです。フラクタルの持つ美しさと複雑さを、音で感じてみてください。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/fractal-music/&#34;&gt;→ フラクタル音楽アプリを試す&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
