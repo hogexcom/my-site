@@ -1,6 +1,6 @@
 baseURL = "https://hogexcom.github.io/my-site/"
 languageCode = 'ja-JP'
-title = 'My New Hugo Site'
+title = 'My Site'
 theme = "PaperMod"
 
 [outputs]
