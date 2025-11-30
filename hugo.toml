@@ -1,4 +1,4 @@
-baseURL = "https://hogexcom.github.io/my-site/"
+baseURL = "/"
 languageCode = 'ja-JP'
 title = 'My New Hugo Site'
 theme = "PaperMod"
