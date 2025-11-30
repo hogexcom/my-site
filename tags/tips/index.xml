@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tips on My New Hugo Site</title><link>https://hogexcom.github.io/my-site/tags/tips/</link><description>Recent content in Tips on My New Hugo Site</description><generator>Hugo</generator><language>ja-JP</language><lastBuildDate>Sun, 30 Nov 2025 13:08:43 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/tips/index.xml" rel="self" type="application/rss+xml"/><item><title>マークダウンで記事を書くメリット</title><link>https://hogexcom.github.io/my-site/posts/markdown-benefits/</link><pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/markdown-benefits/</guid><description>&lt;h2 id="マークダウンとは"&gt;マークダウンとは&lt;/h2&gt;
+&lt;p&gt;マークダウン（Markdown）は、シンプルな記法で文書を書くための軽量マークアップ言語です。2004年にJohn Gruberによって開発されました。&lt;/p&gt;
+&lt;h2 id="マークダウンの基本記法"&gt;マークダウンの基本記法&lt;/h2&gt;
+&lt;h3 id="見出し"&gt;見出し&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;# 見出し1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;## 見出し2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;### 見出し3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="強調"&gt;強調&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt;は&lt;code&gt;**太字**&lt;/code&gt;、&lt;em&gt;イタリック&lt;/em&gt;は&lt;code&gt;*イタリック*&lt;/code&gt;で表現します。&lt;/p&gt;
+&lt;h3 id="リスト"&gt;リスト&lt;/h3&gt;
+&lt;h4 id="順序なしリスト"&gt;順序なしリスト&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;項目1&lt;/li&gt;
+&lt;li&gt;項目2
+&lt;ul&gt;
+&lt;li&gt;サブ項目2-1&lt;/li&gt;
+&lt;li&gt;サブ項目2-2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;項目3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="順序付きリスト"&gt;順序付きリスト&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;最初の項目&lt;/li&gt;
+&lt;li&gt;次の項目&lt;/li&gt;
+&lt;li&gt;最後の項目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="リンクと画像"&gt;リンクと画像&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://example.com"&gt;リンクテキスト&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;[&lt;span style="color:#f92672"&gt;リンクテキスト&lt;/span&gt;](&lt;span style="color:#a6e22e"&gt;https://example.com&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;![&lt;span style="color:#f92672"&gt;画像の説明&lt;/span&gt;](&lt;span style="color:#a6e22e"&gt;image.png&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="コードブロック"&gt;コードブロック&lt;/h3&gt;
+&lt;p&gt;プログラミングコードは、バッククォート3つで囲みます：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hello&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;console&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;log&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="マークダウンのメリット"&gt;マークダウンのメリット&lt;/h2&gt;
+&lt;h3 id="1-プレーンテキストで管理できる"&gt;1. プレーンテキストで管理できる&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;.md&lt;/code&gt;ファイルは単なるテキストファイルなので、どんなエディタでも開けます。Gitなどのバージョン管理システムとの相性も抜群です。&lt;/p&gt;
+&lt;h3 id="2-書くことに集中できる"&gt;2. 書くことに集中できる&lt;/h3&gt;
+&lt;p&gt;複雑な書式設定に気を取られることなく、コンテンツの執筆に集中できます。&lt;/p&gt;
+&lt;h3 id="3-可搬性が高い"&gt;3. 可搬性が高い&lt;/h3&gt;
+&lt;p&gt;マークダウンファイルはHTML、PDF、Wordなど様々な形式に変換できます。&lt;/p&gt;
+&lt;h3 id="4-学習コストが低い"&gt;4. 学習コストが低い&lt;/h3&gt;
+&lt;p&gt;基本的な記法は15分もあれば習得できます。&lt;/p&gt;
+&lt;h2 id="人気のマークダウンエディタ"&gt;人気のマークダウンエディタ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VSCode&lt;/strong&gt; - 拡張機能が豊富&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Typora&lt;/strong&gt; - リアルタイムプレビュー&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt; - ナレッジベース構築に最適&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;iA Writer&lt;/strong&gt; - シンプルで美しいUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
+&lt;p&gt;マークダウンは、技術文書、ブログ記事、メモ、ドキュメンテーションなど、あらゆる文書作成に活用できます。一度覚えれば一生使えるスキルです！&lt;/p&gt;</description></item></channel></rss>
