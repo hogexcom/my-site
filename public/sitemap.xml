@@ -2,14 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/my-site/categories/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/markdown/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/my-site/</loc>
-    <lastmod>2025-11-30T12:17:15+09:00</lastmod>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/posts/</loc>
-    <lastmod>2025-11-30T12:17:15+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/my-site/categories/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/tags/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/tips/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/posts/markdown-benefits/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E5%9F%B7%E7%AD%86/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/categories/%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2025-11-30T13:08:43+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/hugo/</loc>
+    <lastmod>2025-11-30T13:08:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/posts/hugo-introduction/</loc>
+    <lastmod>2025-11-30T13:08:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/web%E3%82%B5%E3%82%A4%E3%83%88/</loc>
+    <lastmod>2025-11-30T13:08:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88/</loc>
+    <lastmod>2025-11-30T13:08:40+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/posts/first-post/</loc>
+    <lastmod>2025-11-30T12:17:15+09:00</lastmod>
   </url>
 </urlset>

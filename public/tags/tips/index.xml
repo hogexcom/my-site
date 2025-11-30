@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/my-site/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Tips on My New Hugo Site</title>
+    <link>http://localhost:1313/my-site/tags/tips/</link>
+    <description>Recent content in Tips on My New Hugo Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
     <lastBuildDate>Sun, 30 Nov 2025 13:08:43 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/my-site/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-site/tags/tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>マークダウンで記事を書くメリット</title>
       <link>http://localhost:1313/my-site/posts/markdown-benefits/</link>
@@ -67,54 +67,6 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
 &lt;p&gt;マークダウンは、技術文書、ブログ記事、メモ、ドキュメンテーションなど、あらゆる文書作成に活用できます。一度覚えれば一生使えるスキルです！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugoを使った静的サイト構築入門</title>
-      <link>http://localhost:1313/my-site/posts/hugo-introduction/</link>
-      <pubDate>Sun, 30 Nov 2025 13:08:40 +0900</pubDate>
-      <guid>http://localhost:1313/my-site/posts/hugo-introduction/</guid>
-      <description>&lt;h2 id=&#34;hugoとは&#34;&gt;Hugoとは&lt;/h2&gt;
-&lt;p&gt;Hugoは、Go言語で書かれた高速な静的サイトジェネレーターです。マークダウンファイルから美しいWebサイトを数秒で生成できます。&lt;/p&gt;
-&lt;h2 id=&#34;hugoの特徴&#34;&gt;Hugoの特徴&lt;/h2&gt;
-&lt;h3 id=&#34;1-圧倒的な速度&#34;&gt;1. 圧倒的な速度&lt;/h3&gt;
-&lt;p&gt;Hugoは数千ページのサイトでも1秒以内にビルドできるほど高速です。これは他の静的サイトジェネレーターと比較しても圧倒的な速さです。&lt;/p&gt;
-&lt;h3 id=&#34;2-シンプルなセットアップ&#34;&gt;2. シンプルなセットアップ&lt;/h3&gt;
-&lt;p&gt;単一のバイナリファイルとして配布されているため、依存関係の管理が不要です。インストールも非常に簡単です。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# macOSの場合&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# バージョン確認&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-豊富なテーマ&#34;&gt;3. 豊富なテーマ&lt;/h3&gt;
-&lt;p&gt;300以上のテーマが用意されており、好みのデザインをすぐに適用できます。今回使用しているPaperModもその一つです。&lt;/p&gt;
-&lt;h2 id=&#34;基本的な使い方&#34;&gt;基本的な使い方&lt;/h2&gt;
-&lt;h3 id=&#34;新しいサイトの作成&#34;&gt;新しいサイトの作成&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site my-site
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-site
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;テーマのインストール&#34;&gt;テーマのインストール&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;記事の作成&#34;&gt;記事の作成&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-first-post.md
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ローカルサーバーの起動&#34;&gt;ローカルサーバーの起動&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ブラウザで &lt;code&gt;http://localhost:1313&lt;/code&gt; にアクセスすると、サイトがライブプレビューされます。&lt;/p&gt;
-&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;Hugoは以下のようなサイトに最適です：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;個人ブログ&lt;/li&gt;
-&lt;li&gt;ポートフォリオサイト&lt;/li&gt;
-&lt;li&gt;ドキュメントサイト&lt;/li&gt;
-&lt;li&gt;企業のコーポレートサイト&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;マークダウンで記事を書くだけで、美しく高速なWebサイトが構築できます。ぜひ試してみてください！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>First Post</title>
-      <link>http://localhost:1313/my-site/posts/first-post/</link>
-      <pubDate>Sun, 30 Nov 2025 12:17:15 +0900</pubDate>
-      <guid>http://localhost:1313/my-site/posts/first-post/</guid>
-      <description>&lt;p&gt;hello world&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

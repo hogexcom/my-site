@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/my-site/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>技術 on My New Hugo Site</title>
+    <link>http://localhost:1313/my-site/categories/%E6%8A%80%E8%A1%93/</link>
+    <description>Recent content in 技術 on My New Hugo Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
     <lastBuildDate>Sun, 30 Nov 2025 13:08:43 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/my-site/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-site/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>マークダウンで記事を書くメリット</title>
       <link>http://localhost:1313/my-site/posts/markdown-benefits/</link>
@@ -108,13 +108,6 @@
 &lt;li&gt;企業のコーポレートサイト&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;マークダウンで記事を書くだけで、美しく高速なWebサイトが構築できます。ぜひ試してみてください！&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>First Post</title>
-      <link>http://localhost:1313/my-site/posts/first-post/</link>
-      <pubDate>Sun, 30 Nov 2025 12:17:15 +0900</pubDate>
-      <guid>http://localhost:1313/my-site/posts/first-post/</guid>
-      <description>&lt;p&gt;hello world&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
