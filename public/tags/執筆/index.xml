@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>執筆 on My Site</title>
-    <link>http://localhost:1313/tags/%E5%9F%B7%E7%AD%86/</link>
+    <link>http://localhost:1313/my-site/tags/%E5%9F%B7%E7%AD%86/</link>
     <description>Recent content in 執筆 on My Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
     <lastBuildDate>Sun, 30 Nov 2025 13:08:43 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%9F%B7%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-site/tags/%E5%9F%B7%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>マークダウンで記事を書くメリット</title>
-      <link>http://localhost:1313/posts/markdown-benefits/</link>
+      <link>http://localhost:1313/my-site/posts/markdown-benefits/</link>
       <pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate>
-      <guid>http://localhost:1313/posts/markdown-benefits/</guid>
+      <guid>http://localhost:1313/my-site/posts/markdown-benefits/</guid>
       <description>&lt;h2 id=&#34;マークダウンとは&#34;&gt;マークダウンとは&lt;/h2&gt;
 &lt;p&gt;マークダウン（Markdown）は、シンプルな記法で文書を書くための軽量マークアップ言語です。2004年にJohn Gruberによって開発されました。&lt;/p&gt;
 &lt;h2 id=&#34;マークダウンの基本記法&#34;&gt;マークダウンの基本記法&lt;/h2&gt;
