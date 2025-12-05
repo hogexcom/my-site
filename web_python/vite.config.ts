@@ -26,6 +26,7 @@ export default defineConfig({
         'fractal-music': resolve(__dirname, 'fractal-music/index.html'),
         'hele-shaw': resolve(__dirname, 'hele-shaw/index.html'),
         'hele-shaw-gap': resolve(__dirname, 'hele-shaw-gap/index.html'),
+        'viscous-fingering': resolve(__dirname, 'viscous-fingering/index.html'),
       },
       output: {
         // コード分割設定

@@ -29,6 +29,8 @@
 &lt;p&gt;基本解近似解法（MFS）によるヘレショウ流れの数値シミュレーション。表面張力による曲線の時間発展を可視化します。&lt;/p&gt;
 &lt;h3 id=&#34;-hele-shaw-gap-rising-flow&#34;&gt;🫧 Hele-Shaw Gap Rising Flow&lt;/h3&gt;
 &lt;p&gt;時間変化する隙間幅におけるヘレショウ流れのシミュレーション。気泡の不安定性を可視化します。&lt;/p&gt;
+&lt;h3 id=&#34;-viscous-fingering&#34;&gt;🖐️ Viscous Fingering&lt;/h3&gt;
+&lt;p&gt;Saffman-Taylor不安定性による指状パターン形成。粘性流体の界面不安定性を可視化します。&lt;/p&gt;
 &lt;h3 id=&#34;-spectral-mesh-filter&#34;&gt;🔬 Spectral Mesh Filter&lt;/h3&gt;
 &lt;p&gt;3Dメッシュのスペクトル分解とローパスフィルター処理。OBJファイルを読み込んでメッシュの高周波成分を除去できます。&lt;/p&gt;
 &lt;h2 id=&#34;技術スタック&#34;&gt;技術スタック&lt;/h2&gt;

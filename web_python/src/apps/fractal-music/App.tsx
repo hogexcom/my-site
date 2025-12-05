@@ -26,11 +26,11 @@ export interface GeneratedMusic {
 }
 
 function App() {
-  const [hurstIndex, setHurstIndex] = useState(0.5)  // デフォルト0.5（ランダムウォーク）
+  const [hurstIndex, setHurstIndex] = useState(0.89)  // デフォルト0.5（ランダムウォーク）
   const [songDuration, setSongDuration] = useState(30)  // 曲の長さ（秒）
   const [numTracks, setNumTracks] = useState(3)  // デフォルト3トラック
-  const [noteDuration, setNoteDuration] = useState(0.25)  // メロディの1音の長さ（秒）
-  const [pitchRangeMin, setPitchRangeMin] = useState(48)
+  const [noteDuration, setNoteDuration] = useState(0.6)  // メロディの1音の長さ（秒）
+  const [pitchRangeMin, setPitchRangeMin] = useState(53)
   const [pitchRangeMax, setPitchRangeMax] = useState(84)
   const [melodyInstrument, setMelodyInstrument] = useState(73)  // フルート
   const [bassInstrument, setBassInstrument] = useState(33)  // エレキベース

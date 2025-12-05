@@ -119,6 +119,28 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Viscous Fingering（粘性フィンガリング）シミュレーション
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Viscous Fingering とは Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。
+→ シミュレーションを試す
+Saffman-Taylor 不安定性 この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。
+不安定性のメカニズム 界面に微小な摂動（凸凹）が生じる 凸部では圧力勾配が大きくなり、流れが加速 凹部では圧力勾配が小さくなり、流れが減速 この正のフィードバックにより摂動が成長 線形安定性解析 波数 $k$ の摂動に対する成長率 $\omega$ は：
+$$\omega(k) = \frac{V k}{1 &#43; k/k_c}$$
+ここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：
+$$k_c = \sqrt{\frac{12 \mu V}{\sigma b^2}}$$
+シミュレーションの特徴 初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面 不安定性の発達: 時間発展とともに指状パターンが成長 競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察 パラメータ このシミュレーションでは以下のパラメータを使用しています：
+パラメータ 値 説明 $\sigma$ $10^{-4}$ 表面張力（小さいほど不安定） $q$ $-2.0$ 湧き出し強度 $N$ 300 離散点数 応用分野 Viscous fingeringは以下の分野で重要です：
+石油工学: 二次・三次回収における水攻法 地質学: 地下水流動、マグマ貫入 材料科学: 樹脂成形、コーティング 生物学: 細菌コロニーの成長パターン 参考文献 このシミュレーションは以下の書籍の内容を実装したものです：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 13:50:56 +0900 JST'>December 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Viscous Fingering（粘性フィンガリング）シミュレーション" href="http://localhost:1313/my-site/posts/viscous-fingering-simulation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Pyodide Web Apps - ブラウザで動くPython科学計算アプリ
     </h2>
   </header>
@@ -128,6 +150,7 @@
 特徴 インストール不要: ブラウザだけでPythonが動きます Pyodide採用: WebAssemblyでコンパイルされたPythonを使用 リアルタイム処理: パラメータを調整してすぐに結果を確認 収録アプリ 🎵 Fractal Music Generator フラクタル理論（1/fノイズ）に基づく自動作曲アプリ。Hurst指数を調整して、多様なメロディを生成できます。
 🌊 Hele-Shaw Flow Simulation 基本解近似解法（MFS）によるヘレショウ流れの数値シミュレーション。表面張力による曲線の時間発展を可視化します。
 🫧 Hele-Shaw Gap Rising Flow 時間変化する隙間幅におけるヘレショウ流れのシミュレーション。気泡の不安定性を可視化します。
+🖐️ Viscous Fingering Saffman-Taylor不安定性による指状パターン形成。粘性流体の界面不安定性を可視化します。
 🔬 Spectral Mesh Filter 3Dメッシュのスペクトル分解とローパスフィルター処理。OBJファイルを読み込んでメッシュの高周波成分を除去できます。
 技術スタック Pyodide - WebAssembly上で動作するPython React - UIフレームワーク Vite - 高速なビルドツール Three.js - 3Dグラフィックス NumPy / SciPy - 科学計算 → アプリ一覧を見る
 </p>

@@ -35,9 +35,16 @@ const apps: AppInfo[] = [
   {
     id: 'hele-shaw-gap',
     title: 'Hele-Shaw Gap Rising Flow',
-    description: '基本解近似解法（MFS）による隙間上昇ヘレショウ流れ。時間変化する隙間幅における気泡の不安定性を可視化。',
+    description: '基本解近似解法（MFS）による雙間上昇ヘレショウ流れ。時間変化する雙間幅における気泡の不安定性を可視化。',
     path: `${BASE_URL}hele-shaw-gap/`,
     icon: '🫧'
+  },
+  {
+    id: 'viscous-fingering',
+    title: 'Viscous Fingering',
+    description: 'Saffman-Taylor不安定性による指状パターン形成。粘性流体の界面不安定性を可視化。',
+    path: `${BASE_URL}viscous-fingering/`,
+    icon: '🖐️'
   },
   // 新しいアプリはここに追加
 ]
