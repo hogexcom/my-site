@@ -72,6 +72,11 @@
     }
 
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"></script>
+
+
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -109,6 +114,71 @@
 
 <article class="first-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Pyodide Web Apps - ブラウザで動くPython科学計算アプリ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pyodide Web Apps Pythonの科学計算ライブラリをブラウザ上で実行できるアプリケーション集を作成しました。
+→ アプリ一覧へ
+特徴 インストール不要: ブラウザだけでPythonが動きます Pyodide採用: WebAssemblyでコンパイルされたPythonを使用 リアルタイム処理: パラメータを調整してすぐに結果を確認 収録アプリ 🎵 Fractal Music Generator フラクタル理論（1/fノイズ）に基づく自動作曲アプリ。Hurst指数を調整して、多様なメロディを生成できます。
+🌊 Hele-Shaw Flow Simulation 基本解近似解法（MFS）によるヘレショウ流れの数値シミュレーション。表面張力による曲線の時間発展を可視化します。
+🫧 Hele-Shaw Gap Rising Flow 時間変化する隙間幅におけるヘレショウ流れのシミュレーション。気泡の不安定性を可視化します。
+🔬 Spectral Mesh Filter 3Dメッシュのスペクトル分解とローパスフィルター処理。OBJファイルを読み込んでメッシュの高周波成分を除去できます。
+技術スタック Pyodide - WebAssembly上で動作するPython React - UIフレームワーク Vite - 高速なビルドツール Three.js - 3Dグラフィックス NumPy / SciPy - 科学計算 → アプリ一覧を見る
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 12:20:14 +0900 JST'>December 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Pyodide Web Apps - ブラウザで動くPython科学計算アプリ" href="http://localhost:1313/my-site/posts/python-apps/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ヘレショウセル流れの数値シミュレーション
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ヘレショウセルとは ヘレショウセル（Hele-Shaw cell）は、2枚の平行なガラス板の間に粘性流体を注入して流れを観察する実験装置です。1898年にHenry Selby Hele-Shawによって考案されました。
+→ シミュレーションを試す
+数学的背景 ヘレショウ流れは、狭い隙間での粘性流体の流れを記述します。圧力場 $p$ はラプラス方程式を満たします：
+$$\nabla^2 p = 0$$
+界面では、表面張力による境界条件が課されます：
+$$p = \sigma \kappa$$
+ここで $\sigma$ は表面張力、$\kappa$ は曲率です。
+基本解近似解法（MFS） このシミュレーションでは基本解近似解法（Method of Fundamental Solutions）を使用しています。MFSはメッシュ不要の数値解法で、極源点を領域外に配置して解を近似します。
+アルゴリズム 初期曲線を設定 曲線上に配置点、曲線外に極源点を配置 境界条件から極の強さを決定 法線速度を計算して曲線を更新 時間ステップを繰り返す 特徴 リアルタイム可視化: 曲線の時間発展をアニメーションで表示 パラメータ調整: 表面張力や時間ステップを変更可能 ブラウザ完結: PyodideでPythonがブラウザ上で実行 物理的意義 ヘレショウ流れは以下の現象のモデルとして重要です：
+石油回収におけるビスカスフィンガリング 多孔質媒体中の流れ 細胞の移動パターン 参考文献 このシミュレーションは以下の書籍の内容を実装したものです：
+矢崎成俊『動く曲線の数値計算』共立出版, 2019年7月10日 矢崎成俊『界面現象と曲線の微積分』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日 → シミュレーションを試す
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 12:20:14 +0900 JST'>December 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to ヘレショウセル流れの数値シミュレーション" href="http://localhost:1313/my-site/posts/hele-shaw-simulation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">隙間上昇ヘレショウ流れのシミュレーション
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>隙間上昇ヘレショウ流れ 通常のヘレショウセルではガラス板の隙間は一定ですが、このシミュレーションでは時間とともに隙間が広がる場合を扱います。
+→ シミュレーションを試す
+数学的背景 隙間幅 $b(t)$ が時間的に変化する場合、質量保存則から追加の項が現れます：
+$$\frac{\partial b}{\partial t} &#43; \nabla \cdot (b \mathbf{v}) = 0$$
+隙間が広がると、周囲から流体が吸い込まれ、気泡の界面に不安定性が生じます。
+Saffman-Taylor 不安定性 粘性の高い流体が粘性の低い流体に押し出されるとき、界面は不安定になり「指」のようなパターンを形成します。これはSaffman-Taylor不安定性として知られています。
+不安定性の条件 波数 $k$ の摆乱に対する成長率は：
+$$\omega(k) = V k - \frac{\sigma b^2}{12\mu} k^3$$
+第一項は不安定化、第二項（表面張力）は安定化に寄与します。
+シミュレーションの特徴 隙間幅の時間変化: 隙間が広がる効果を取り入れ 不安定性の可視化: 指状パターンの発達を観察 MFSによる解法: メッシュ不要で高精度な計算 応用例 油田における水攻法のモデリング マイクロ流体デバイスの設計 生物組織の成長パターンの理解 操作方法 アプリを開くと自動的にPython環境が読み込まれます 「再生」ボタンでシミュレーションを開始 曲線の時間発展をリアルタイムで観察 不安定性による指状パターンの発達を確認 参考文献 このシミュレーションは以下の書籍の内容を実装したものです：
+矢崎成俊『動く曲線の数値計算』共立出版, 2019年7月10日 矢崎成俊『界面現象と曲線の微積分』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日 → シミュレーションを試す
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 12:20:14 +0900 JST'>December 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 隙間上昇ヘレショウ流れのシミュレーション" href="http://localhost:1313/my-site/posts/hele-shaw-gap-simulation/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">フラクタル音楽生成アプリを作りました
     </h2>
   </header>
@@ -139,59 +209,6 @@
   </div>
   <footer class="entry-footer"><span title='2025-11-30 19:31:32 +0900 JST'>November 30, 2025</span></footer>
   <a class="entry-link" aria-label="post link to フラクタル音楽生成アプリを作りました" href="http://localhost:1313/my-site/posts/fractal-music-app/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">マークダウンで記事を書くメリット
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>マークダウンとは マークダウン（Markdown）は、シンプルな記法で文書を書くための軽量マークアップ言語です。2004年にJohn Gruberによって開発されました。
-マークダウンの基本記法 見出し # 見出し1 ## 見出し2 ### 見出し3 強調 太字は**太字**、イタリックは*イタリック*で表現します。
-リスト 順序なしリスト 項目1 項目2 サブ項目2-1 サブ項目2-2 項目3 順序付きリスト 最初の項目 次の項目 最後の項目 リンクと画像 リンクテキスト
-[リンクテキスト](https://example.com) ![画像の説明](image.png) コードブロック プログラミングコードは、バッククォート3つで囲みます：
-function hello() { console.log(&#34;Hello, World!&#34;); } マークダウンのメリット 1. プレーンテキストで管理できる .mdファイルは単なるテキストファイルなので、どんなエディタでも開けます。Gitなどのバージョン管理システムとの相性も抜群です。
-2. 書くことに集中できる 複雑な書式設定に気を取られることなく、コンテンツの執筆に集中できます。
-3. 可搬性が高い マークダウンファイルはHTML、PDF、Wordなど様々な形式に変換できます。
-4. 学習コストが低い 基本的な記法は15分もあれば習得できます。
-人気のマークダウンエディタ VSCode - 拡張機能が豊富 Typora - リアルタイムプレビュー Obsidian - ナレッジベース構築に最適 iA Writer - シンプルで美しいUI まとめ マークダウンは、技術文書、ブログ記事、メモ、ドキュメンテーションなど、あらゆる文書作成に活用できます。一度覚えれば一生使えるスキルです！
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-30 13:08:43 +0900 JST'>November 30, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to マークダウンで記事を書くメリット" href="http://localhost:1313/my-site/posts/markdown-benefits/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hugoを使った静的サイト構築入門
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Hugoとは Hugoは、Go言語で書かれた高速な静的サイトジェネレーターです。マークダウンファイルから美しいWebサイトを数秒で生成できます。
-Hugoの特徴 1. 圧倒的な速度 Hugoは数千ページのサイトでも1秒以内にビルドできるほど高速です。これは他の静的サイトジェネレーターと比較しても圧倒的な速さです。
-2. シンプルなセットアップ 単一のバイナリファイルとして配布されているため、依存関係の管理が不要です。インストールも非常に簡単です。
-# macOSの場合 brew install hugo # バージョン確認 hugo version 3. 豊富なテーマ 300以上のテーマが用意されており、好みのデザインをすぐに適用できます。今回使用しているPaperModもその一つです。
-基本的な使い方 新しいサイトの作成 hugo new site my-site cd my-site テーマのインストール git init git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod 記事の作成 hugo new posts/my-first-post.md ローカルサーバーの起動 hugo server -D ブラウザで http://localhost:1313 にアクセスすると、サイトがライブプレビューされます。
-まとめ Hugoは以下のようなサイトに最適です：
-個人ブログ ポートフォリオサイト ドキュメントサイト 企業のコーポレートサイト マークダウンで記事を書くだけで、美しく高速なWebサイトが構築できます。ぜひ試してみてください！
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-30 13:08:40 +0900 JST'>November 30, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Hugoを使った静的サイト構築入門" href="http://localhost:1313/my-site/posts/hugo-introduction/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">First Post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>hello world
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-30 12:17:15 +0900 JST'>November 30, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to First Post" href="http://localhost:1313/my-site/posts/first-post/"></a>
 </article>
     </main>
     

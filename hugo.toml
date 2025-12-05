@@ -3,5 +3,8 @@ languageCode = 'ja-JP'
 title = 'My Site'
 theme = "PaperMod"
 
+[params]
+  math = true
+
 [outputs]
   home = [ "HTML" ]

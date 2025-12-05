@@ -1,0 +1,9 @@
+# Hugo
+public/python-apps/
+# resources/
+
+# Build artifacts
+# static/python-apps/
+
+# OS
+.DS_Store

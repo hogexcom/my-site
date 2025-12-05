@@ -15,7 +15,7 @@
       <guid>http://localhost:1313/my-site/posts/fractal-music-app/</guid>
       <description>&lt;h2 id=&#34;フラクタル音楽生成アプリ&#34;&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/fractal-music/&#34;&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/fractal-music/&#34;&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;フラクタル音楽とは何か&#34;&gt;フラクタル音楽とは何か&lt;/h1&gt;
 &lt;p&gt;自然界には、海岸線・雲・樹木の枝分かれなど、**自己相似性（フラクタル構造）**を持つ形が無数に存在します。この自己相似性は空間だけでなく、&lt;strong&gt;時間変化&lt;/strong&gt;にも現れます。&lt;/p&gt;
 &lt;p&gt;自然界のランダムな変動が&lt;br&gt;

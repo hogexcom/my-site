@@ -10,7 +10,7 @@ categories = ['技術']
 
 フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。
 
-**[アプリを試す →](/my-site/fractal-music/)**
+**[アプリを試す →](/my-site/python-apps/fractal-music/)**
 
 # フラクタル音楽とは何か
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ヘレショウ on My Site</title>
+    <link>http://localhost:1313/my-site/tags/%E3%83%98%E3%83%AC%E3%82%B7%E3%83%A7%E3%82%A6/</link>
+    <description>Recent content in ヘレショウ on My Site</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 05 Dec 2025 12:20:14 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/my-site/tags/%E3%83%98%E3%83%AC%E3%82%B7%E3%83%A7%E3%82%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ヘレショウセル流れの数値シミュレーション</title>
+      <link>http://localhost:1313/my-site/posts/hele-shaw-simulation/</link>
+      <pubDate>Fri, 05 Dec 2025 12:20:14 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/posts/hele-shaw-simulation/</guid>
+      <description>&lt;h2 id=&#34;ヘレショウセルとは&#34;&gt;ヘレショウセルとは&lt;/h2&gt;
+&lt;p&gt;ヘレショウセル（Hele-Shaw cell）は、2枚の平行なガラス板の間に粘性流体を注入して流れを観察する実験装置です。1898年にHenry Selby Hele-Shawによって考案されました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/hele-shaw/&#34;&gt;→ シミュレーションを試す&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数学的背景&#34;&gt;数学的背景&lt;/h2&gt;
+&lt;p&gt;ヘレショウ流れは、狭い隙間での粘性流体の流れを記述します。圧力場 $p$ はラプラス方程式を満たします：&lt;/p&gt;
+&lt;p&gt;$$\nabla^2 p = 0$$&lt;/p&gt;
+&lt;p&gt;界面では、表面張力による境界条件が課されます：&lt;/p&gt;
+&lt;p&gt;$$p = \sigma \kappa$$&lt;/p&gt;
+&lt;p&gt;ここで $\sigma$ は表面張力、$\kappa$ は曲率です。&lt;/p&gt;
+&lt;h2 id=&#34;基本解近似解法mfs&#34;&gt;基本解近似解法（MFS）&lt;/h2&gt;
+&lt;p&gt;このシミュレーションでは基本解近似解法（Method of Fundamental Solutions）を使用しています。MFSはメッシュ不要の数値解法で、極源点を領域外に配置して解を近似します。&lt;/p&gt;
+&lt;h3 id=&#34;アルゴリズム&#34;&gt;アルゴリズム&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;初期曲線を設定&lt;/li&gt;
+&lt;li&gt;曲線上に配置点、曲線外に極源点を配置&lt;/li&gt;
+&lt;li&gt;境界条件から極の強さを決定&lt;/li&gt;
+&lt;li&gt;法線速度を計算して曲線を更新&lt;/li&gt;
+&lt;li&gt;時間ステップを繰り返す&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;特徴&#34;&gt;特徴&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;リアルタイム可視化&lt;/strong&gt;: 曲線の時間発展をアニメーションで表示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;パラメータ調整&lt;/strong&gt;: 表面張力や時間ステップを変更可能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ブラウザ完結&lt;/strong&gt;: PyodideでPythonがブラウザ上で実行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;物理的意義&#34;&gt;物理的意義&lt;/h2&gt;
+&lt;p&gt;ヘレショウ流れは以下の現象のモデルとして重要です：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;石油回収におけるビスカスフィンガリング&lt;/li&gt;
+&lt;li&gt;多孔質媒体中の流れ&lt;/li&gt;
+&lt;li&gt;細胞の移動パターン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;p&gt;このシミュレーションは以下の書籍の内容を実装したものです：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;矢崎成俊『&lt;strong&gt;動く曲線の数値計算&lt;/strong&gt;』共立出版, 2019年7月10日&lt;/li&gt;
+&lt;li&gt;矢崎成俊『&lt;strong&gt;界面現象と曲線の微積分&lt;/strong&gt;』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/hele-shaw/&#34;&gt;→ シミュレーションを試す&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>隙間上昇ヘレショウ流れのシミュレーション</title>
+      <link>http://localhost:1313/my-site/posts/hele-shaw-gap-simulation/</link>
+      <pubDate>Fri, 05 Dec 2025 12:20:14 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/posts/hele-shaw-gap-simulation/</guid>
+      <description>&lt;h2 id=&#34;隙間上昇ヘレショウ流れ&#34;&gt;隙間上昇ヘレショウ流れ&lt;/h2&gt;
+&lt;p&gt;通常のヘレショウセルではガラス板の隙間は一定ですが、このシミュレーションでは時間とともに隙間が広がる場合を扱います。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/hele-shaw-gap/&#34;&gt;→ シミュレーションを試す&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数学的背景&#34;&gt;数学的背景&lt;/h2&gt;
+&lt;p&gt;隙間幅 $b(t)$ が時間的に変化する場合、質量保存則から追加の項が現れます：&lt;/p&gt;
+&lt;p&gt;$$\frac{\partial b}{\partial t} + \nabla \cdot (b \mathbf{v}) = 0$$&lt;/p&gt;
+&lt;p&gt;隙間が広がると、周囲から流体が吸い込まれ、気泡の界面に不安定性が生じます。&lt;/p&gt;
+&lt;h2 id=&#34;saffman-taylor-不安定性&#34;&gt;Saffman-Taylor 不安定性&lt;/h2&gt;
+&lt;p&gt;粘性の高い流体が粘性の低い流体に押し出されるとき、界面は不安定になり「指」のようなパターンを形成します。これはSaffman-Taylor不安定性として知られています。&lt;/p&gt;
+&lt;h3 id=&#34;不安定性の条件&#34;&gt;不安定性の条件&lt;/h3&gt;
+&lt;p&gt;波数 $k$ の摆乱に対する成長率は：&lt;/p&gt;
+&lt;p&gt;$$\omega(k) = V k - \frac{\sigma b^2}{12\mu} k^3$$&lt;/p&gt;
+&lt;p&gt;第一項は不安定化、第二項（表面張力）は安定化に寄与します。&lt;/p&gt;
+&lt;h2 id=&#34;シミュレーションの特徴&#34;&gt;シミュレーションの特徴&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;隙間幅の時間変化&lt;/strong&gt;: 隙間が広がる効果を取り入れ&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不安定性の可視化&lt;/strong&gt;: 指状パターンの発達を観察&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MFSによる解法&lt;/strong&gt;: メッシュ不要で高精度な計算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;応用例&#34;&gt;応用例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;油田における水攻法のモデリング&lt;/li&gt;
+&lt;li&gt;マイクロ流体デバイスの設計&lt;/li&gt;
+&lt;li&gt;生物組織の成長パターンの理解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作方法&#34;&gt;操作方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;アプリを開くと自動的にPython環境が読み込まれます&lt;/li&gt;
+&lt;li&gt;「再生」ボタンでシミュレーションを開始&lt;/li&gt;
+&lt;li&gt;曲線の時間発展をリアルタイムで観察&lt;/li&gt;
+&lt;li&gt;不安定性による指状パターンの発達を確認&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;p&gt;このシミュレーションは以下の書籍の内容を実装したものです：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;矢崎成俊『&lt;strong&gt;動く曲線の数値計算&lt;/strong&gt;』共立出版, 2019年7月10日&lt;/li&gt;
+&lt;li&gt;矢崎成俊『&lt;strong&gt;界面現象と曲線の微積分&lt;/strong&gt;』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/hele-shaw-gap/&#34;&gt;→ シミュレーションを試す&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
