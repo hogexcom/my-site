@@ -1,0 +1,136 @@
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Viscous Fingering（粘性フィンガリング）シミュレーション | My Site</title><meta name=keywords content="ヘレショウ,流体力学,MFS,Saffman-Taylor,不安定性,Python"><meta name=description content="Viscous Fingering とは
+Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。
+→ シミュレーションを試す
+Saffman-Taylor 不安定性
+この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。
+不安定性のメカニズム
+
+界面に微小な摂動（凸凹）が生じる
+凸部では圧力勾配が大きくなり、流れが加速
+凹部では圧力勾配が小さくなり、流れが減速
+この正のフィードバックにより摂動が成長
+
+線形安定性解析
+波数 $k$ の摂動に対する成長率 $\omega$ は：
+$$\omega(k) = \frac{V k}{1 + k/k_c}$$
+ここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：
+$$k_c = \sqrt{\frac{12 \mu V}{\sigma b^2}}$$
+シミュレーションの特徴
+
+初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面
+不安定性の発達: 時間発展とともに指状パターンが成長
+競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察
+
+パラメータ
+このシミュレーションでは以下のパラメータを使用しています：
+
+  
+      
+          パラメータ
+          値
+          説明
+      
+  
+  
+      
+          $\sigma$
+          $10^{-4}$
+          表面張力（小さいほど不安定）
+      
+      
+          $q$
+          $-2.0$
+          湧き出し強度
+      
+      
+          $N$
+          300
+          離散点数
+      
+  
+
+応用分野
+Viscous fingeringは以下の分野で重要です：
+
+石油工学: 二次・三次回収における水攻法
+地質学: 地下水流動、マグマ貫入
+材料科学: 樹脂成形、コーティング
+生物学: 細菌コロニーの成長パターン
+
+参考文献
+このシミュレーションは以下の書籍の内容を実装したものです："><meta name=author content><link rel=canonical href=https://hogexcom.github.io/my-site/posts/viscous-fingering-simulation/><link crossorigin=anonymous href=/my-site/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css integrity="sha256-NDzEgLn/yPBMy+XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as=style><link rel=icon href=https://hogexcom.github.io/my-site/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://hogexcom.github.io/my-site/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://hogexcom.github.io/my-site/favicon-32x32.png><link rel=apple-touch-icon href=https://hogexcom.github.io/my-site/apple-touch-icon.png><link rel=mask-icon href=https://hogexcom.github.io/my-site/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://hogexcom.github.io/my-site/posts/viscous-fingering-simulation/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js crossorigin=anonymous onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})'></script><meta property="og:url" content="https://hogexcom.github.io/my-site/posts/viscous-fingering-simulation/"><meta property="og:site_name" content="My Site"><meta property="og:title" content="Viscous Fingering（粘性フィンガリング）シミュレーション"><meta property="og:description" content="Viscous Fingering とは Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。
+→ シミュレーションを試す
+Saffman-Taylor 不安定性 この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。
+不安定性のメカニズム 界面に微小な摂動（凸凹）が生じる 凸部では圧力勾配が大きくなり、流れが加速 凹部では圧力勾配が小さくなり、流れが減速 この正のフィードバックにより摂動が成長 線形安定性解析 波数 $k$ の摂動に対する成長率 $\omega$ は：
+$$\omega(k) = \frac{V k}{1 + k/k_c}$$
+ここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：
+$$k_c = \sqrt{\frac{12 \mu V}{\sigma b^2}}$$
+シミュレーションの特徴 初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面 不安定性の発達: 時間発展とともに指状パターンが成長 競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察 パラメータ このシミュレーションでは以下のパラメータを使用しています：
+パラメータ 値 説明 $\sigma$ $10^{-4}$ 表面張力（小さいほど不安定） $q$ $-2.0$ 湧き出し強度 $N$ 300 離散点数 応用分野 Viscous fingeringは以下の分野で重要です：
+石油工学: 二次・三次回収における水攻法 地質学: 地下水流動、マグマ貫入 材料科学: 樹脂成形、コーティング 生物学: 細菌コロニーの成長パターン 参考文献 このシミュレーションは以下の書籍の内容を実装したものです："><meta property="og:locale" content="ja-JP"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-12-05T13:50:56+09:00"><meta property="article:modified_time" content="2025-12-05T13:50:56+09:00"><meta property="article:tag" content="ヘレショウ"><meta property="article:tag" content="流体力学"><meta property="article:tag" content="MFS"><meta property="article:tag" content="Saffman-Taylor"><meta property="article:tag" content="不安定性"><meta property="article:tag" content="Python"><meta name=twitter:card content="summary"><meta name=twitter:title content="Viscous Fingering（粘性フィンガリング）シミュレーション"><meta name=twitter:description content="Viscous Fingering とは
+Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。
+→ シミュレーションを試す
+Saffman-Taylor 不安定性
+この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。
+不安定性のメカニズム
+
+界面に微小な摂動（凸凹）が生じる
+凸部では圧力勾配が大きくなり、流れが加速
+凹部では圧力勾配が小さくなり、流れが減速
+この正のフィードバックにより摂動が成長
+
+線形安定性解析
+波数 $k$ の摂動に対する成長率 $\omega$ は：
+$$\omega(k) = \frac{V k}{1 + k/k_c}$$
+ここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：
+$$k_c = \sqrt{\frac{12 \mu V}{\sigma b^2}}$$
+シミュレーションの特徴
+
+初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面
+不安定性の発達: 時間発展とともに指状パターンが成長
+競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察
+
+パラメータ
+このシミュレーションでは以下のパラメータを使用しています：
+
+  
+      
+          パラメータ
+          値
+          説明
+      
+  
+  
+      
+          $\sigma$
+          $10^{-4}$
+          表面張力（小さいほど不安定）
+      
+      
+          $q$
+          $-2.0$
+          湧き出し強度
+      
+      
+          $N$
+          300
+          離散点数
+      
+  
+
+応用分野
+Viscous fingeringは以下の分野で重要です：
+
+石油工学: 二次・三次回収における水攻法
+地質学: 地下水流動、マグマ貫入
+材料科学: 樹脂成形、コーティング
+生物学: 細菌コロニーの成長パターン
+
+参考文献
+このシミュレーションは以下の書籍の内容を実装したものです："><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://hogexcom.github.io/my-site/posts/"},{"@type":"ListItem","position":2,"name":"Viscous Fingering（粘性フィンガリング）シミュレーション","item":"https://hogexcom.github.io/my-site/posts/viscous-fingering-simulation/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Viscous Fingering（粘性フィンガリング）シミュレーション","name":"Viscous Fingering（粘性フィンガリング）シミュレーション","description":"Viscous Fingering とは Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。\n→ シミュレーションを試す\nSaffman-Taylor 不安定性 この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。\n不安定性のメカニズム 界面に微小な摂動（凸凹）が生じる 凸部では圧力勾配が大きくなり、流れが加速 凹部では圧力勾配が小さくなり、流れが減速 この正のフィードバックにより摂動が成長 線形安定性解析 波数 $k$ の摂動に対する成長率 $\\omega$ は：\n$$\\omega(k) = \\frac{V k}{1 + k/k_c}$$\nここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：\n$$k_c = \\sqrt{\\frac{12 \\mu V}{\\sigma b^2}}$$\nシミュレーションの特徴 初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面 不安定性の発達: 時間発展とともに指状パターンが成長 競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察 パラメータ このシミュレーションでは以下のパラメータを使用しています：\nパラメータ 値 説明 $\\sigma$ $10^{-4}$ 表面張力（小さいほど不安定） $q$ $-2.0$ 湧き出し強度 $N$ 300 離散点数 応用分野 Viscous fingeringは以下の分野で重要です：\n石油工学: 二次・三次回収における水攻法 地質学: 地下水流動、マグマ貫入 材料科学: 樹脂成形、コーティング 生物学: 細菌コロニーの成長パターン 参考文献 このシミュレーションは以下の書籍の内容を実装したものです：\n","keywords":["ヘレショウ","流体力学","MFS","Saffman-Taylor","不安定性","Python"],"articleBody":"Viscous Fingering とは Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。\n→ シミュレーションを試す\nSaffman-Taylor 不安定性 この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。\n不安定性のメカニズム 界面に微小な摂動（凸凹）が生じる 凸部では圧力勾配が大きくなり、流れが加速 凹部では圧力勾配が小さくなり、流れが減速 この正のフィードバックにより摂動が成長 線形安定性解析 波数 $k$ の摂動に対する成長率 $\\omega$ は：\n$$\\omega(k) = \\frac{V k}{1 + k/k_c}$$\nここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：\n$$k_c = \\sqrt{\\frac{12 \\mu V}{\\sigma b^2}}$$\nシミュレーションの特徴 初期摂動: 複数の波数成分を含む微小摂動を与えた円形界面 不安定性の発達: 時間発展とともに指状パターンが成長 競合現象: 複数の指が競合し、一部が成長、一部が抑制される様子を観察 パラメータ このシミュレーションでは以下のパラメータを使用しています：\nパラメータ 値 説明 $\\sigma$ $10^{-4}$ 表面張力（小さいほど不安定） $q$ $-2.0$ 湧き出し強度 $N$ 300 離散点数 応用分野 Viscous fingeringは以下の分野で重要です：\n石油工学: 二次・三次回収における水攻法 地質学: 地下水流動、マグマ貫入 材料科学: 樹脂成形、コーティング 生物学: 細菌コロニーの成長パターン 参考文献 このシミュレーションは以下の書籍の内容を実装したものです：\n矢崎成俊『動く曲線の数値計算』共立出版, 2019年7月10日 矢崎成俊『界面現象と曲線の微積分』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日 → シミュレーションを試す\n","wordCount":"79","inLanguage":"en","datePublished":"2025-12-05T13:50:56+09:00","dateModified":"2025-12-05T13:50:56+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://hogexcom.github.io/my-site/posts/viscous-fingering-simulation/"},"publisher":{"@type":"Organization","name":"My Site","logo":{"@type":"ImageObject","url":"https://hogexcom.github.io/my-site/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://hogexcom.github.io/my-site/ accesskey=h title="My Site (Alt + H)">My Site</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Viscous Fingering（粘性フィンガリング）シミュレーション</h1><div class=post-meta><span title='2025-12-05 13:50:56 +0900 +0900'>December 5, 2025</span></div></header><div class=post-content><h2 id=viscous-fingering-とは>Viscous Fingering とは<a hidden class=anchor aria-hidden=true href=#viscous-fingering-とは>#</a></h2><p>Viscous Fingering（粘性フィンガリング）は、粘性の異なる2つの流体が接触するときに界面で発生する不安定性現象です。粘性の低い流体が高い流体を押しのけるとき、界面は「指」のような複雑なパターンを形成します。</p><p><strong><a href=/my-site/python-apps/viscous-fingering/>→ シミュレーションを試す</a></strong></p><h2 id=saffman-taylor-不安定性>Saffman-Taylor 不安定性<a hidden class=anchor aria-hidden=true href=#saffman-taylor-不安定性>#</a></h2><p>この現象は1958年にSaffmanとTaylorによって理論的に解析され、Saffman-Taylor不安定性として知られています。</p><h3 id=不安定性のメカニズム>不安定性のメカニズム<a hidden class=anchor aria-hidden=true href=#不安定性のメカニズム>#</a></h3><ol><li>界面に微小な摂動（凸凹）が生じる</li><li>凸部では圧力勾配が大きくなり、流れが加速</li><li>凹部では圧力勾配が小さくなり、流れが減速</li><li>この正のフィードバックにより摂動が成長</li></ol><h3 id=線形安定性解析>線形安定性解析<a hidden class=anchor aria-hidden=true href=#線形安定性解析>#</a></h3><p>波数 $k$ の摂動に対する成長率 $\omega$ は：</p><p>$$\omega(k) = \frac{V k}{1 + k/k_c}$$</p><p>ここで $V$ は界面の進行速度、$k_c$ は臨界波数です。表面張力 $\sigma$ は短波長の摂動を抑制する安定化効果を持ちます：</p><p>$$k_c = \sqrt{\frac{12 \mu V}{\sigma b^2}}$$</p><h2 id=シミュレーションの特徴>シミュレーションの特徴<a hidden class=anchor aria-hidden=true href=#シミュレーションの特徴>#</a></h2><ul><li><strong>初期摂動</strong>: 複数の波数成分を含む微小摂動を与えた円形界面</li><li><strong>不安定性の発達</strong>: 時間発展とともに指状パターンが成長</li><li><strong>競合現象</strong>: 複数の指が競合し、一部が成長、一部が抑制される様子を観察</li></ul><h2 id=パラメータ>パラメータ<a hidden class=anchor aria-hidden=true href=#パラメータ>#</a></h2><p>このシミュレーションでは以下のパラメータを使用しています：</p><table><thead><tr><th>パラメータ</th><th>値</th><th>説明</th></tr></thead><tbody><tr><td>$\sigma$</td><td>$10^{-4}$</td><td>表面張力（小さいほど不安定）</td></tr><tr><td>$q$</td><td>$-2.0$</td><td>湧き出し強度</td></tr><tr><td>$N$</td><td>300</td><td>離散点数</td></tr></tbody></table><h2 id=応用分野>応用分野<a hidden class=anchor aria-hidden=true href=#応用分野>#</a></h2><p>Viscous fingeringは以下の分野で重要です：</p><ul><li><strong>石油工学</strong>: 二次・三次回収における水攻法</li><li><strong>地質学</strong>: 地下水流動、マグマ貫入</li><li><strong>材料科学</strong>: 樹脂成形、コーティング</li><li><strong>生物学</strong>: 細菌コロニーの成長パターン</li></ul><h2 id=参考文献>参考文献<a hidden class=anchor aria-hidden=true href=#参考文献>#</a></h2><p>このシミュレーションは以下の書籍の内容を実装したものです：</p><ul><li>矢崎成俊『<strong>動く曲線の数値計算</strong>』共立出版, 2019年7月10日</li><li>矢崎成俊『<strong>界面現象と曲線の微積分</strong>』（シリーズ・現象を解明する数学）日本評論社, 2016年8月25日</li></ul><p><strong><a href=/my-site/python-apps/viscous-fingering/>→ シミュレーションを試す</a></strong></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://hogexcom.github.io/my-site/tags/%E3%83%98%E3%83%AC%E3%82%B7%E3%83%A7%E3%82%A6/>ヘレショウ</a></li><li><a href=https://hogexcom.github.io/my-site/tags/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/>流体力学</a></li><li><a href=https://hogexcom.github.io/my-site/tags/mfs/>MFS</a></li><li><a href=https://hogexcom.github.io/my-site/tags/saffman-taylor/>Saffman-Taylor</a></li><li><a href=https://hogexcom.github.io/my-site/tags/%E4%B8%8D%E5%AE%89%E5%AE%9A%E6%80%A7/>不安定性</a></li><li><a href=https://hogexcom.github.io/my-site/tags/python/>Python</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://hogexcom.github.io/my-site/>My Site</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
