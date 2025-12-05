@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技術 on My Site</title><link>https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on My Site</description><generator>Hugo -- 0.152.2</generator><language>ja-JP</language><lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>フラクタル音楽生成アプリを作りました</title><link>https://hogexcom.github.io/my-site/posts/fractal-music-app/</link><pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-music-app/</guid><description>&lt;h2 id="フラクタル音楽生成アプリ"&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/fractal-music/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-music/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id="フラクタル音楽とは何か"&gt;フラクタル音楽とは何か&lt;/h1&gt;
 &lt;p&gt;自然界には、海岸線・雲・樹木の枝分かれなど、**自己相似性（フラクタル構造）**を持つ形が無数に存在します。この自己相似性は空間だけでなく、&lt;strong&gt;時間変化&lt;/strong&gt;にも現れます。&lt;/p&gt;
 &lt;p&gt;自然界のランダムな変動が&lt;br&gt;
@@ -47,91 +47,4 @@
 &lt;p&gt;という仕組みを使って
 ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;
 &lt;p&gt;このアプローチにより、&lt;br&gt;
-**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description></item><item><title>マークダウンで記事を書くメリット</title><link>https://hogexcom.github.io/my-site/posts/markdown-benefits/</link><pubDate>Sun, 30 Nov 2025 13:08:43 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/markdown-benefits/</guid><description>&lt;h2 id="マークダウンとは"&gt;マークダウンとは&lt;/h2&gt;
-&lt;p&gt;マークダウン（Markdown）は、シンプルな記法で文書を書くための軽量マークアップ言語です。2004年にJohn Gruberによって開発されました。&lt;/p&gt;
-&lt;h2 id="マークダウンの基本記法"&gt;マークダウンの基本記法&lt;/h2&gt;
-&lt;h3 id="見出し"&gt;見出し&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;# 見出し1
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;## 見出し2
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;### 見出し3
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="強調"&gt;強調&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt;は&lt;code&gt;**太字**&lt;/code&gt;、&lt;em&gt;イタリック&lt;/em&gt;は&lt;code&gt;*イタリック*&lt;/code&gt;で表現します。&lt;/p&gt;
-&lt;h3 id="リスト"&gt;リスト&lt;/h3&gt;
-&lt;h4 id="順序なしリスト"&gt;順序なしリスト&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;項目1&lt;/li&gt;
-&lt;li&gt;項目2
-&lt;ul&gt;
-&lt;li&gt;サブ項目2-1&lt;/li&gt;
-&lt;li&gt;サブ項目2-2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;項目3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="順序付きリスト"&gt;順序付きリスト&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;最初の項目&lt;/li&gt;
-&lt;li&gt;次の項目&lt;/li&gt;
-&lt;li&gt;最後の項目&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="リンクと画像"&gt;リンクと画像&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://example.com"&gt;リンクテキスト&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;[&lt;span style="color:#f92672"&gt;リンクテキスト&lt;/span&gt;](&lt;span style="color:#a6e22e"&gt;https://example.com&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;![&lt;span style="color:#f92672"&gt;画像の説明&lt;/span&gt;](&lt;span style="color:#a6e22e"&gt;image.png&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="コードブロック"&gt;コードブロック&lt;/h3&gt;
-&lt;p&gt;プログラミングコードは、バッククォート3つで囲みます：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hello&lt;/span&gt;() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;console&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;log&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="マークダウンのメリット"&gt;マークダウンのメリット&lt;/h2&gt;
-&lt;h3 id="1-プレーンテキストで管理できる"&gt;1. プレーンテキストで管理できる&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;.md&lt;/code&gt;ファイルは単なるテキストファイルなので、どんなエディタでも開けます。Gitなどのバージョン管理システムとの相性も抜群です。&lt;/p&gt;
-&lt;h3 id="2-書くことに集中できる"&gt;2. 書くことに集中できる&lt;/h3&gt;
-&lt;p&gt;複雑な書式設定に気を取られることなく、コンテンツの執筆に集中できます。&lt;/p&gt;
-&lt;h3 id="3-可搬性が高い"&gt;3. 可搬性が高い&lt;/h3&gt;
-&lt;p&gt;マークダウンファイルはHTML、PDF、Wordなど様々な形式に変換できます。&lt;/p&gt;
-&lt;h3 id="4-学習コストが低い"&gt;4. 学習コストが低い&lt;/h3&gt;
-&lt;p&gt;基本的な記法は15分もあれば習得できます。&lt;/p&gt;
-&lt;h2 id="人気のマークダウンエディタ"&gt;人気のマークダウンエディタ&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;VSCode&lt;/strong&gt; - 拡張機能が豊富&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Typora&lt;/strong&gt; - リアルタイムプレビュー&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt; - ナレッジベース構築に最適&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;iA Writer&lt;/strong&gt; - シンプルで美しいUI&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;マークダウンは、技術文書、ブログ記事、メモ、ドキュメンテーションなど、あらゆる文書作成に活用できます。一度覚えれば一生使えるスキルです！&lt;/p&gt;</description></item><item><title>Hugoを使った静的サイト構築入門</title><link>https://hogexcom.github.io/my-site/posts/hugo-introduction/</link><pubDate>Sun, 30 Nov 2025 13:08:40 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/hugo-introduction/</guid><description>&lt;h2 id="hugoとは"&gt;Hugoとは&lt;/h2&gt;
-&lt;p&gt;Hugoは、Go言語で書かれた高速な静的サイトジェネレーターです。マークダウンファイルから美しいWebサイトを数秒で生成できます。&lt;/p&gt;
-&lt;h2 id="hugoの特徴"&gt;Hugoの特徴&lt;/h2&gt;
-&lt;h3 id="1-圧倒的な速度"&gt;1. 圧倒的な速度&lt;/h3&gt;
-&lt;p&gt;Hugoは数千ページのサイトでも1秒以内にビルドできるほど高速です。これは他の静的サイトジェネレーターと比較しても圧倒的な速さです。&lt;/p&gt;
-&lt;h3 id="2-シンプルなセットアップ"&gt;2. シンプルなセットアップ&lt;/h3&gt;
-&lt;p&gt;単一のバイナリファイルとして配布されているため、依存関係の管理が不要です。インストールも非常に簡単です。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# macOSの場合&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install hugo
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# バージョン確認&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo version
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="3-豊富なテーマ"&gt;3. 豊富なテーマ&lt;/h3&gt;
-&lt;p&gt;300以上のテーマが用意されており、好みのデザインをすぐに適用できます。今回使用しているPaperModもその一つです。&lt;/p&gt;
-&lt;h2 id="基本的な使い方"&gt;基本的な使い方&lt;/h2&gt;
-&lt;h3 id="新しいサイトの作成"&gt;新しいサイトの作成&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo new site my-site
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd my-site
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="テーマのインストール"&gt;テーマのインストール&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git init
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="記事の作成"&gt;記事の作成&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo new posts/my-first-post.md
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="ローカルサーバーの起動"&gt;ローカルサーバーの起動&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ブラウザで &lt;code&gt;http://localhost:1313&lt;/code&gt; にアクセスすると、サイトがライブプレビューされます。&lt;/p&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;Hugoは以下のようなサイトに最適です：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;個人ブログ&lt;/li&gt;
-&lt;li&gt;ポートフォリオサイト&lt;/li&gt;
-&lt;li&gt;ドキュメントサイト&lt;/li&gt;
-&lt;li&gt;企業のコーポレートサイト&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;マークダウンで記事を書くだけで、美しく高速なWebサイトが構築できます。ぜひ試してみてください！&lt;/p&gt;</description></item></channel></rss>
+**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description></item></channel></rss>

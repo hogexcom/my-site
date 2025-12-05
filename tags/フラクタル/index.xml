@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>フラクタル on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</link><description>Recent content in フラクタル on My Site</description><generator>Hugo -- 0.152.2</generator><language>ja-JP</language><lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>フラクタル音楽生成アプリを作りました</title><link>https://hogexcom.github.io/my-site/posts/fractal-music-app/</link><pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-music-app/</guid><description>&lt;h2 id="フラクタル音楽生成アプリ"&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/fractal-music/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-music/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id="フラクタル音楽とは何か"&gt;フラクタル音楽とは何か&lt;/h1&gt;
 &lt;p&gt;自然界には、海岸線・雲・樹木の枝分かれなど、**自己相似性（フラクタル構造）**を持つ形が無数に存在します。この自己相似性は空間だけでなく、&lt;strong&gt;時間変化&lt;/strong&gt;にも現れます。&lt;/p&gt;
 &lt;p&gt;自然界のランダムな変動が&lt;br&gt;
