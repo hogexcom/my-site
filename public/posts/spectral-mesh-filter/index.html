@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/my-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-site/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>3Dメッシュのスペクトル分解とフィルタリング | My Site</title>
+<meta name="keywords" content="3D, 信号処理, 数学, WebApp">
+<meta name="description" content="3Dメッシュを周波数成分に分解し、音声のイコライザーのようにフィルタリングできるWebアプリを作りました。">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/my-site/posts/spectral-mesh-filter/">
+<link crossorigin="anonymous" href="/my-site/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/my-site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/my-site/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/my-site/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/my-site/posts/spectral-mesh-filter/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/my-site/" accesskey="h" title="My Site (Alt + H)">My Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      3Dメッシュのスペクトル分解とフィルタリング
+    </h1>
+    <div class="post-meta"><span title='2025-12-06 00:00:00 +0000 UTC'>December 6, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
+<p>音声や画像には「周波数」という概念があり、ローパスフィルターやハイパスフィルターで特定の成分を強調・除去できます。では、3Dモデルにも同じことができるのでしょうか？</p>
+<p>答えは <strong>Yes</strong> です。</p>
+<p>3Dメッシュも周波数成分に分解でき、「低周波 = なめらかな大域的形状」「高周波 = 細かいディテール」として操作できます。この技術を <strong>スペクトルメッシュ処理</strong> と呼びます。</p>
+<h2 id="デモアプリ">デモアプリ<a hidden class="anchor" aria-hidden="true" href="#デモアプリ">#</a></h2>
+<p>実際に試せるWebアプリを作りました：</p>
+<p>👉 <strong><a href="/my-site/python-apps/spectral-mesh/">Spectral Mesh Filter</a></strong></p>
+<h3 id="機能">機能<a hidden class="anchor" aria-hidden="true" href="#機能">#</a></h3>
+<ul>
+<li><strong>OBJ, STL, PLY, glTF, FBX形式</strong>の3Dモデルを読み込み可能</li>
+<li><strong>スペクトル解析</strong>: ラプラシアン行列の固有値分解</li>
+<li><strong>フィルターカーブ</strong>: 各周波数成分の強度をカーブで指定</li>
+<li><strong>基底関数の可視化</strong>: 固有ベクトル（調和関数）をメッシュ上に表示</li>
+</ul>
+<h2 id="理論的背景">理論的背景<a hidden class="anchor" aria-hidden="true" href="#理論的背景">#</a></h2>
+<p>このアプリは以下の論文に基づいています：</p>
+<blockquote>
+<p><strong>Spectral Geometry Processing with Manifold Harmonics</strong><br>
+Bruno Vallet and Bruno Lévy<br>
+<em>Computer Graphics Forum (Eurographics 2008)</em></p>
+</blockquote>
+<h3 id="manifold-harmonics-transform-mht">Manifold Harmonics Transform (MHT)<a hidden class="anchor" aria-hidden="true" href="#manifold-harmonics-transform-mht">#</a></h3>
+<p>MHTは、3Dメッシュ上で定義されたフーリエ変換の拡張です。</p>
+<p>1Dの信号 $f(t)$ に対するフーリエ変換が
+$$\hat{f}(\omega) = \int f(t) e^{-i\omega t} dt$$
+であるように、メッシュ上の関数 $f$ に対するMHTは
+$$\hat{f}_k = \langle f, H_k \rangle = \sum_i f_i \cdot H_k(v_i)$$
+と定義されます。</p>
+<p>ここで $H_k$ はラプラシアン行列の固有ベクトル（<strong>調和関数</strong>）です。</p>
+<h3 id="ラプラシアン行列">ラプラシアン行列<a hidden class="anchor" aria-hidden="true" href="#ラプラシアン行列">#</a></h3>
+<p>メッシュのラプラシアン行列 $\Delta$ は、頂点間の関係を表す行列です。論文では <strong>DEC (Discrete Exterior Calculus)</strong> に基づく定式化を使用：</p>
+<p>$$\bar{\Delta} = \star_0^{-1} \cdot \Delta \cdot \star_0$$</p>
+<p>この対称化されたラプラシアンの固有値分解により、周波数（固有値）と基底関数（固有ベクトル）が得られます。</p>
+<h3 id="周波数フィルタリング">周波数フィルタリング<a hidden class="anchor" aria-hidden="true" href="#周波数フィルタリング">#</a></h3>
+<p>固有値 $\lambda_k$ に対応する周波数は $\omega_k = \sqrt{\lambda_k}$ です。</p>
+<p>フィルター関数 $h(\omega)$ を適用した再構成は：
+$$f&rsquo;(v_i) = \sum_k h(\omega_k) \cdot \hat{f}_k \cdot H_k(v_i)$$</p>
+<ul>
+<li><strong>ローパスフィルター</strong>: 高周波をカット → なめらかに</li>
+<li><strong>ハイパスフィルター</strong>: 低周波を抑制 → ディテールを強調</li>
+<li><strong>カスタムカーブ</strong>: 任意の周波数応答を設計</li>
+</ul>
+<h2 id="実装について">実装について<a hidden class="anchor" aria-hidden="true" href="#実装について">#</a></h2>
+<h3 id="技術スタック">技術スタック<a hidden class="anchor" aria-hidden="true" href="#技術スタック">#</a></h3>
+<ul>
+<li><strong>Pyodide</strong>: ブラウザ上でPython (NumPy, SciPy) を実行</li>
+<li><strong>Three.js / React Three Fiber</strong>: 3D描画</li>
+<li><strong>TypeScript + React</strong>: UI</li>
+</ul>
+<h3 id="計算の流れ">計算の流れ<a hidden class="anchor" aria-hidden="true" href="#計算の流れ">#</a></h3>
+<ol>
+<li><strong>ラプラシアン行列の構築</strong>: コタンジェント重みを使用</li>
+<li><strong>固有値分解</strong>: Shift-Invert Lanczos法で低周波側から計算</li>
+<li><strong>MHT</strong>: 頂点座標をスペクトル係数に変換</li>
+<li><strong>フィルタリング</strong>: カーブに従って係数を調整</li>
+<li><strong>逆MHT</strong>: スペクトル係数を頂点座標に戻す</li>
+</ol>
+<h3 id="残差の扱い">残差の扱い<a hidden class="anchor" aria-hidden="true" href="#残差の扱い">#</a></h3>
+<p>全固有対を計算するのは計算量的に非現実的なため、計算した固有対で表現できない「残差」が生じます。この残差は超高周波成分として、フィルターカーブの平均値を適用しています。</p>
+<h2 id="応用例">応用例<a hidden class="anchor" aria-hidden="true" href="#応用例">#</a></h2>
+<ul>
+<li><strong>メッシュのスムージング</strong>: ノイズ除去</li>
+<li><strong>ディテールの強調</strong>: 彫刻的な表現</li>
+<li><strong>形状圧縮</strong>: 低周波成分のみ保存</li>
+<li><strong>形状モーフィング</strong>: スペクトル空間での補間</li>
+</ul>
+<h2 id="まとめ">まとめ<a hidden class="anchor" aria-hidden="true" href="#まとめ">#</a></h2>
+<p>スペクトルメッシュ処理は、音声処理のイコライザーのような直感的な操作を3Dモデルに適用できる強力な手法です。ぜひデモアプリで試してみてください！</p>
+<h2 id="参考文献">参考文献<a hidden class="anchor" aria-hidden="true" href="#参考文献">#</a></h2>
+<ol>
+<li>Vallet, B., &amp; Lévy, B. (2008). Spectral Geometry Processing with Manifold Harmonics. <em>Computer Graphics Forum</em>, 27(2), 251-260.</li>
+<li>Taubin, G. (1995). A signal processing approach to fair surface design. <em>SIGGRAPH &lsquo;95</em>.</li>
+<li>Desbrun, M., Meyer, M., Schröder, P., &amp; Barr, A. H. (1999). Implicit fairing of irregular meshes using diffusion and curvature flow. <em>SIGGRAPH &lsquo;99</em>.</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/my-site/tags/3d/">3D</a></li>
+      <li><a href="http://localhost:1313/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/">信号処理</a></li>
+      <li><a href="http://localhost:1313/my-site/tags/%E6%95%B0%E5%AD%A6/">数学</a></li>
+      <li><a href="http://localhost:1313/my-site/tags/webapp/">WebApp</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/my-site/">My Site</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

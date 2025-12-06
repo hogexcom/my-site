@@ -73,5 +73,20 @@
   </url><url>
     <loc>http://localhost:1313/my-site/tags/%E9%9F%B3%E6%A5%BD/</loc>
     <lastmod>2025-11-30T19:31:32+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/3d/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/posts/spectral-mesh-filter/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/webapp/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2024-12-06T00:00:00+00:00</lastmod>
   </url>
 </urlset>

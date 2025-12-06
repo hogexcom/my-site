@@ -64,5 +64,12 @@
 &lt;p&gt;このアプローチにより、&lt;br&gt;
 **自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>3Dメッシュのスペクトル分解とフィルタリング</title>
+      <link>http://localhost:1313/my-site/posts/spectral-mesh-filter/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-site/posts/spectral-mesh-filter/</guid>
+      <description>3Dメッシュを周波数成分に分解し、音声のイコライザーのようにフィルタリングできるWebアプリを作りました。</description>
+    </item>
   </channel>
 </rss>

@@ -98,6 +98,13 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.slider-hint {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
 .filter-button {
   padding: 0.75rem 1.5rem;
   background-color: #646cff;
@@ -131,10 +138,189 @@
   text-align: center;
 }
 
+/* 解析進捗ステータスボックス */
+.status-box {
+  padding: 0.75rem;
+  background-color: rgba(100, 108, 255, 0.1);
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.status-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  color: #646cff;
+}
+
+.status-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(100, 108, 255, 0.3);
+  border-top-color: #646cff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .canvas-container {
   width: 100%;
   height: 100%;
   background-color: #0a0a0a;
+}
+
+/* 固有ベクトルセクション */
+.eigenvector-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eigenvector-section label sub {
+  font-size: 0.7em;
+}
+
+/* カーブエディターセクション */
+.curve-editor-section {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.curve-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.curve-editor svg {
+  border-radius: 4px;
+  overflow: visible;
+}
+
+.curve-editor-hint {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+/* ボタンとヘルプの横並び */
+.button-with-help {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.button-with-help .filter-button {
+  margin-top: 0;
+  flex: 1;
+}
+
+/* ツールチップ */
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.25rem;
+}
+
+.tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tooltip-trigger:hover {
+  color: #ffffff;
+  background-color: rgba(100, 108, 255, 0.3);
+  border-color: #646cff;
+}
+
+.tooltip-content {
+  position: fixed;
+  z-index: 10000;
+  width: 280px;
+  max-width: calc(100vw - 40px);
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  pointer-events: auto;
+}
+
+.tooltip-content strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #646cff;
+  font-size: 0.85rem;
+}
+
+.tooltip-content p {
+  margin: 0.4rem 0;
+}
+
+.tooltip-content ul,
+.tooltip-content ol {
+  margin: 0.4rem 0;
+  padding-left: 1.2rem;
+}
+
+.tooltip-content li {
+  margin: 0.2rem 0;
+}
+
+/* カラーレジェンド（青→白→赤） */
+.color-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(to right, #0000ff, #ffffff, #ff0000);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.legend-negative {
+  color: #ffffff;
+  text-shadow: 0 0 2px #000000;
+}
+
+.legend-positive {
+  color: #ffffff;
+  text-shadow: 0 0 2px #000000;
 }
 
 /* レスポンシブ対応 */
