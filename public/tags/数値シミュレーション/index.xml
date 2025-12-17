@@ -6,8 +6,64 @@
     <description>Recent content in 数値シミュレーション on My Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 05 Dec 2025 12:20:14 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>フーリエフィルタリングによるフラクタルノイズ生成</title>
+      <link>http://localhost:1313/my-site/posts/fractal-noise-app/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/posts/fractal-noise-app/</guid>
+      <description>&lt;h2 id=&#34;フラクタルノイズ生成アプリ&#34;&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
+&lt;p&gt;フーリエフィルタリング法を使用してフラクタルノイズを生成し、1D波形・2D高さマップ・レイマーチング可視化を行うWebアプリケーションを作成しました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/fractal-noise/&#34;&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;フラクタルノイズとは&#34;&gt;フラクタルノイズとは&lt;/h2&gt;
+&lt;p&gt;フラクタルノイズは、自然界に見られる複雑な形状やパターンを生成するための重要な手法です。山岳地形、雲、海岸線など、自然界の多くの構造は**自己相似性（スケール不変性）**を持っており、これをコンピュータで再現するために使用されます。&lt;/p&gt;
+&lt;h3 id=&#34;パワースペクトル密度と1fノイズ&#34;&gt;パワースペクトル密度と1/fノイズ&lt;/h3&gt;
+&lt;p&gt;フラクタルノイズの特徴は、そのパワースペクトル密度が周波数に対して&lt;strong&gt;べき乗則&lt;/strong&gt;に従うことです：&lt;/p&gt;
+&lt;p&gt;$$
+P(f) \propto f^{-\beta}
+$$&lt;/p&gt;
+&lt;p&gt;ここで：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$P(f)$：周波数$f$におけるパワースペクトル密度&lt;/li&gt;
+&lt;li&gt;$\beta$：スペクトル指数（周波数特性を決定）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代表的なノイズの種類：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;白色ノイズ（β=0）&lt;/strong&gt;：すべての周波数成分が等しい（完全にランダム）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ピンクノイズ（β=1、1/fノイズ）&lt;/strong&gt;：自然界で最も一般的なゆらぎ&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ブラウンノイズ（β=2、1/f²ノイズ）&lt;/strong&gt;：ランダムウォーク、ブラウン運動&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ハースト指数との関係&#34;&gt;ハースト指数との関係&lt;/h3&gt;
+&lt;p&gt;ハースト指数$H$は、信号の滑らかさ・持続性を表すパラメータで、スペクトル指数$\beta$と以下の関係があります：&lt;/p&gt;
+&lt;p&gt;$$
+\beta = 2H + 1 \quad \text{(1次元の場合)}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\beta = 2H + 2 \quad \text{(2次元の場合)}
+$$&lt;/p&gt;
+&lt;p&gt;ハースト指数の意味：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;H = 0.5&lt;/strong&gt;：ランダムウォーク（白色ノイズ）、過去と未来に相関なし&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;H &amp;lt; 0.5&lt;/strong&gt;：反持続的、荒い変動が多い&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;H &amp;gt; 0.5&lt;/strong&gt;：持続的、滑らかな変動が多い（自然な地形など）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;フーリエフィルタリング法の原理&#34;&gt;フーリエフィルタリング法の原理&lt;/h2&gt;
+&lt;p&gt;フーリエフィルタリング法は、以下の手順でフラクタルノイズを生成します：&lt;/p&gt;
+&lt;h3 id=&#34;1-周波数領域での構成&#34;&gt;1. 周波数領域での構成&lt;/h3&gt;
+&lt;p&gt;各周波数成分$k$に対して、フーリエ係数$A_k$を以下のように設定：&lt;/p&gt;
+&lt;p&gt;$$
+A_k = \sqrt{P_k} \cdot e^{i\phi_k}
+$$&lt;/p&gt;
+&lt;p&gt;ここで：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$P_k = |k|^{-\beta}$：目標とするパワースペクトル密度&lt;/li&gt;
+&lt;li&gt;$\phi_k$：ランダムな位相（一様分布から生成）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;振幅$\sqrt{P_k}$の部分は、期待値としてパワースペクトルを$P_k$にするため$\sqrt{|k|^{-\beta}}$とします。また、各周波数成分を独立なガウス確率変数として生成することで、自然な変動を作り出します。&lt;/p&gt;
+&lt;h3 id=&#34;2-エルミート対称性の保証&#34;&gt;2. エルミート対称性の保証&lt;/h3&gt;
+&lt;p&gt;実数値信号を得るため、フーリエ係数は以下のエルミート対称性を満たす必要があります：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ヘレショウセル流れの数値シミュレーション</title>
       <link>http://localhost:1313/my-site/posts/hele-shaw-simulation/</link>

@@ -26,6 +26,13 @@ const apps: AppInfo[] = [
     icon: '🎵'
   },
   {
+    id: 'fractal-noise',
+    title: 'Fractal Noise Generator',
+    description: 'フーリエフィルタリングによるフラクタルノイズ生成。1D波形、2D高さマップ、レイマーチング地形の3つのモードを搭載。',
+    path: `${BASE_URL}fractal-noise/`,
+    icon: '🌄'
+  },
+  {
     id: 'hele-shaw',
     title: 'Hele-Shaw Flow Simulation',
     description: '基本解近似解法（MFS）によるヘレショウ流れの数値シミュレーション。表面張力による曲線の時間発展を可視化。',
