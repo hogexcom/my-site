@@ -114,6 +114,32 @@
 
 <article class="first-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">断層線アルゴリズムによるフラクタル惑星生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>フラクタル惑星生成アプリ ランダムな断層線（大円）を累積的に配置することで、リアルな地形を持つフラクタル惑星を生成するWebアプリケーションを作成しました。
+アプリを試す →
+断層線アルゴリズムとは 断層線アルゴリズム（Fault Line Algorithm）は、地形生成の古典的な手法の一つで、地質学的な断層運動を模倣することでフラクタル的な地形を作り出します。
+基本原理 球面上での断層線アルゴリズムは以下のステップで動作します：
+ランダムな大円の生成
+球の中心を通る平面をランダムに生成 この平面と球面の交線が「断層線」となる 地形の変位
+断層線の両側で高度を上下させる 片側を&#43;d、反対側を-dだけ変位 反復処理
+このプロセスを数百回繰り返す 各断層の変位量は一定または減衰 フラクタル地形の生成
+多数の断層が重なることで複雑な地形が形成される 自然な山脈、平野、海洋が現れる 数学的定式化 球面上の点 $\mathbf{r} = (x, y, z)$（単位球上）と、ランダムな単位法線ベクトル $\mathbf{n} = (n_x, n_y, n_z)$ について：
+大円による平面の方程式： $$ \mathbf{n} \cdot \mathbf{r} = 0 $$
+点 $\mathbf{r}$ がどちら側にあるかは内積の符号で判定： $$ \text{side}(\mathbf{r}) = \text{sign}(\mathbf{n} \cdot \mathbf{r}) $$
+$i$ 回目の断層による高度変化： $$ h_i(\mathbf{r}) = d_i \cdot \text{side}_i(\mathbf{r}) $$
+総合的な高度： $$ H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r}) $$
+座標系の変換 球面座標から直交座標への変換 経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-19 00:00:00 +0900 JST'>December 19, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 断層線アルゴリズムによるフラクタル惑星生成" href="http://localhost:1313/my-site/posts/fractal-planet-generator/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">フーリエフィルタリングによるフラクタルノイズ生成
     </h2>
   </header>

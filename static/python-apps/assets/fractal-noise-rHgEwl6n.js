@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";import{r as h,j as t,c as J}from"./vendor-three-BnpV2lbo.js";import{u as O}from"./usePyodide-BJDiuWYS.js";import"./vendor-react-CCYiWZgt.js";function Y(){const[c,I]=h.useState("1d"),[R,B]=h.useState(.75),[A,M]=h.useState(1024),[E,$]=h.useState(128),[L,F]=h.useState(!1),U=h.useRef(null),G=h.useRef(null),k=h.useRef(null),T=h.useRef(null),S=h.useRef(null),{pyodide:f,isReady:x,error:H}=O(["fractal_noise_1d.py","fractal_noise_2d.py"]),C=h.useCallback(async()=>{if(!(!f||!x||!U.current)){F(!0);try{await f.runPythonAsync(`
+import"./modulepreload-polyfill-B5Qt9EMX.js";import{r as h,j as t,c as J}from"./vendor-three-DWdYVK8p.js";import{u as O}from"./usePyodide-Bpngy5wJ.js";import"./vendor-react-CCYiWZgt.js";function Y(){const[c,I]=h.useState("1d"),[R,B]=h.useState(.75),[A,M]=h.useState(1024),[E,$]=h.useState(128),[L,F]=h.useState(!1),U=h.useRef(null),G=h.useRef(null),k=h.useRef(null),T=h.useRef(null),S=h.useRef(null),{pyodide:f,isReady:x,error:H}=O(["fractal_noise_1d.py","fractal_noise_2d.py"]),C=h.useCallback(async()=>{if(!(!f||!x||!U.current)){F(!0);try{await f.runPythonAsync(`
 import fractal_noise_1d
 import numpy as np
 

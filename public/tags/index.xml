@@ -6,27 +6,48 @@
     <description>Recent content in Tags on My Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/my-site/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python</title>
       <link>http://localhost:1313/my-site/tags/python/</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
       <guid>http://localhost:1313/my-site/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Three.js</title>
+      <link>http://localhost:1313/my-site/tags/three.js/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/tags/three.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebApp</title>
+      <link>http://localhost:1313/my-site/tags/webapp/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/tags/webapp/</guid>
       <description></description>
     </item>
     <item>
       <title>WebGL</title>
       <link>http://localhost:1313/my-site/tags/webgl/</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
       <guid>http://localhost:1313/my-site/tags/webgl/</guid>
       <description></description>
     </item>
     <item>
       <title>フラクタル</title>
       <link>http://localhost:1313/my-site/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
       <guid>http://localhost:1313/my-site/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数値シミュレーション</title>
+      <link>http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</link>
+      <pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</guid>
       <description></description>
     </item>
     <item>
@@ -37,24 +58,10 @@
       <description></description>
     </item>
     <item>
-      <title>数値シミュレーション</title>
-      <link>http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>3D</title>
       <link>http://localhost:1313/my-site/tags/3d/</link>
       <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/my-site/tags/3d/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>WebApp</title>
-      <link>http://localhost:1313/my-site/tags/webapp/</link>
-      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-site/tags/webapp/</guid>
       <description></description>
     </item>
     <item>

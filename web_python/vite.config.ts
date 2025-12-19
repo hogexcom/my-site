@@ -25,6 +25,7 @@ export default defineConfig({
         'spectral-mesh': resolve(__dirname, 'spectral-mesh/index.html'),
         'fractal-music': resolve(__dirname, 'fractal-music/index.html'),
         'fractal-noise': resolve(__dirname, 'fractal-noise/index.html'),
+        'fractal-planet': resolve(__dirname, 'fractal-planet/index.html'),
         'hele-shaw': resolve(__dirname, 'hele-shaw/index.html'),
         'hele-shaw-gap': resolve(__dirname, 'hele-shaw-gap/index.html'),
         'viscous-fingering': resolve(__dirname, 'viscous-fingering/index.html'),

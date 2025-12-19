@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>WebApp on My Site</title>
-    <link>http://localhost:1313/my-site/tags/webapp/</link>
-    <description>Recent content in WebApp on My Site</description>
+    <title>Three.js on My Site</title>
+    <link>http://localhost:1313/my-site/tags/three.js/</link>
+    <description>Recent content in Three.js on My Site</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ja-JP</language>
     <lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/my-site/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-site/tags/three.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>断層線アルゴリズムによるフラクタル惑星生成</title>
       <link>http://localhost:1313/my-site/posts/fractal-planet-generator/</link>
@@ -71,13 +71,6 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;座標系の変換&#34;&gt;座標系の変換&lt;/h3&gt;
 &lt;h4 id=&#34;球面座標から直交座標への変換&#34;&gt;球面座標から直交座標への変換&lt;/h4&gt;
 &lt;p&gt;経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3Dメッシュのスペクトル分解とフィルタリング</title>
-      <link>http://localhost:1313/my-site/posts/spectral-mesh-filter/</link>
-      <pubDate>Sat, 06 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/my-site/posts/spectral-mesh-filter/</guid>
-      <description>3Dメッシュを周波数成分に分解し、音声のイコライザーのようにフィルタリングできるWebアプリを作りました。</description>
     </item>
   </channel>
 </rss>

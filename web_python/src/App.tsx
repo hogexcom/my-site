@@ -53,6 +53,13 @@ const apps: AppInfo[] = [
     path: `${BASE_URL}viscous-fingering/`,
     icon: '🖐️'
   },
+  {
+    id: 'fractal-planet',
+    title: 'Fractal Planet Generator',
+    description: 'ランダムな断層線アルゴリズムによるフラクタル惑星生成。100個の大円を使って、リアルな地形を持つ3D惑星を作成。',
+    path: `${BASE_URL}fractal-planet/`,
+    icon: '🌍'
+  },
   // 新しいアプリはここに追加
 ]
 
