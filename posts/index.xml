@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Site</title><link>https://hogexcom.github.io/my-site/posts/</link><description>Recent content in Posts on My Site</description><generator>Hugo -- 0.152.2</generator><language>ja-JP</language><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on My Site</title><link>https://hogexcom.github.io/my-site/posts/</link><description>Recent content in Posts on My Site</description><generator>Hugo -- 0.152.2</generator><language>ja-JP</language><lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>断層線アルゴリズムによるフラクタル惑星生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</guid><description>&lt;h2 id="フラクタル惑星生成アプリ"&gt;フラクタル惑星生成アプリ&lt;/h2&gt;
+&lt;p&gt;ランダムな断層線（大円）を累積的に配置することで、リアルな地形を持つフラクタル惑星を生成するWebアプリケーションを作成しました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-planet/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="断層線アルゴリズムとは"&gt;断層線アルゴリズムとは&lt;/h2&gt;
+&lt;p&gt;断層線アルゴリズム（Fault Line Algorithm）は、地形生成の古典的な手法の一つで、地質学的な断層運動を模倣することでフラクタル的な地形を作り出します。&lt;/p&gt;
+&lt;h3 id="基本原理"&gt;基本原理&lt;/h3&gt;
+&lt;p&gt;球面上での断層線アルゴリズムは以下のステップで動作します：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;球の中心を通る平面をランダムに生成&lt;/li&gt;
+&lt;li&gt;この平面と球面の交線が「断層線」となる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;地形の変位&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;断層線の両側で高度を上下させる&lt;/li&gt;
+&lt;li&gt;片側を&lt;code&gt;+d&lt;/code&gt;、反対側を&lt;code&gt;-d&lt;/code&gt;だけ変位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;反復処理&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;このプロセスを数百回繰り返す&lt;/li&gt;
+&lt;li&gt;各断層の変位量は一定または減衰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;フラクタル地形の生成&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多数の断層が重なることで複雑な地形が形成される&lt;/li&gt;
+&lt;li&gt;自然な山脈、平野、海洋が現れる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="数学的定式化"&gt;数学的定式化&lt;/h3&gt;
+&lt;p&gt;球面上の点 $\mathbf{r} = (x, y, z)$（単位球上）と、ランダムな単位法線ベクトル $\mathbf{n} = (n_x, n_y, n_z)$ について：&lt;/p&gt;
+&lt;p&gt;大円による平面の方程式：
+$$
+\mathbf{n} \cdot \mathbf{r} = 0
+$$&lt;/p&gt;
+&lt;p&gt;点 $\mathbf{r}$ がどちら側にあるかは内積の符号で判定：
+$$
+\text{side}(\mathbf{r}) = \text{sign}(\mathbf{n} \cdot \mathbf{r})
+$$&lt;/p&gt;
+&lt;p&gt;$i$ 回目の断層による高度変化：
+$$
+h_i(\mathbf{r}) = d_i \cdot \text{side}_i(\mathbf{r})
+$$&lt;/p&gt;
+&lt;p&gt;総合的な高度：
+$$
+H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r})
+$$&lt;/p&gt;
+&lt;h3 id="座標系の変換"&gt;座標系の変換&lt;/h3&gt;
+&lt;h4 id="球面座標から直交座標への変換"&gt;球面座標から直交座標への変換&lt;/h4&gt;
+&lt;p&gt;経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：&lt;/p&gt;</description></item><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルノイズを生成し、1D波形・2D高さマップ・レイマーチング可視化を行うWebアプリケーションを作成しました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-noise/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="フラクタルノイズとは"&gt;フラクタルノイズとは&lt;/h2&gt;
