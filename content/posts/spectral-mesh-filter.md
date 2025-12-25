@@ -5,6 +5,7 @@ draft: false
 tags: ["3D", "信号処理", "数学", "WebApp"]
 categories: ["技術"]
 summary: "3Dメッシュを周波数成分に分解し、音声のイコライザーのようにフィルタリングできるWebアプリを作りました。"
+cover: { image: "/my-site/images/spectral-mesh.png", alt: "スペクトルメッシュのキャッチ画像" }
 ---
 
 ## はじめに

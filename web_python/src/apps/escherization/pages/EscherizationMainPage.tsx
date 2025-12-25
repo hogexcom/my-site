@@ -52,6 +52,7 @@ export function EscherizationMainPage() {
   const [isRunning, setIsRunning] = useState(false)
   const [result, setResult] = useState<Awaited<ReturnType<typeof runEscherizationCore>> | null>(null)
   const [sourceImage, setSourceImage] = useState<ImageBitmap | null>(null)
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null)
   const [canvasSize, setCanvasSize] = useState<CanvasSize>({ width: 900, height: 600 })
   const [view, setView] = useState<CanvasView>({ zoom: 1, panX: 0, panY: 0 })
   const dragState = useRef<{ isDragging: boolean; lastX: number; lastY: number }>({
@@ -90,6 +91,22 @@ export function EscherizationMainPage() {
       sourceImage?.close()
     }
   }, [sourceImage])
+
+  useEffect(() => {
+    if (activeSource === 'sample') {
+      setPreviewUrl(`${BASE_URL}escherization/sample_images/${selectedSample}`)
+      return
+    }
+
+    if (!file) {
+      setPreviewUrl(null)
+      return
+    }
+
+    const url = URL.createObjectURL(file)
+    setPreviewUrl(url)
+    return () => URL.revokeObjectURL(url)
+  }, [activeSource, file, selectedSample])
 
   const parsedTriMaxArea = useMemo(() => {
     const v = Number(triMaxArea)
@@ -294,9 +311,9 @@ export function EscherizationMainPage() {
                 type="file"
                 accept="image/*"
                 onChange={(e) => {
-                  setFile(e.target.files?.[0] ?? null)
+                  const nextFile = e.target.files?.[0] ?? null
+                  setFile(nextFile)
                   setActiveSource('file')
-                  if (e.target.files?.[0]) run()
                 }}
               />
             </label>
@@ -377,6 +394,11 @@ export function EscherizationMainPage() {
         </div>
 
         <div className="escher-tiling-panel">
+          {previewUrl && (
+            <div className="tiling-hud">
+              <img src={previewUrl} alt="エッシャー化前の画像" />
+            </div>
+          )}
           <div className="escher-tiling-header">
             <div>
               <h3>タイリング表示</h3>

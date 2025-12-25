@@ -4,6 +4,7 @@ draft = false
 title = 'フラクタル音楽生成アプリを作りました'
 tags = ['フラクタル', '音楽']
 categories = ['技術']
+cover = { image = "/my-site/images/fractal-music.png", alt = "フラクタル音楽生成のキャッチ画像" }
 +++
 
 ## フラクタル音楽生成アプリ

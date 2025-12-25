@@ -4,6 +4,7 @@ draft = false
 title = 'ヘレショウセル流れの数値シミュレーション'
 tags = ['ヘレショウ', '流体力学', 'MFS', '数値シミュレーション', 'Python']
 categories = ['プロジェクト', '数学']
+cover = { image = "/my-site/images/hele-shaw.png", alt = "ヘレショウセルのキャッチ画像" }
 +++
 
 ## ヘレショウセルとは
