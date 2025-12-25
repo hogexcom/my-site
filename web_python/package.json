@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && rm -rf ../static/python-apps && cp -r ./dist ../static/python-apps",
+    "build": "tsc -b && vite build && rm -rf ../static/python-apps && mkdir -p ../static/python-apps && cp -r ./dist/. ../static/python-apps",
     "lint": "eslint .",
     "preview": "vite preview"
   },
