@@ -23,6 +23,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         // 個別アプリページ
         'spectral-mesh': resolve(__dirname, 'spectral-mesh/index.html'),
+        'escherization': resolve(__dirname, 'escherization/index.html'),
         'fractal-music': resolve(__dirname, 'fractal-music/index.html'),
         'fractal-noise': resolve(__dirname, 'fractal-noise/index.html'),
         'fractal-planet': resolve(__dirname, 'fractal-planet/index.html'),

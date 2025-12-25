@@ -3,19 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/my-site/categories/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/posts/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/pyodide/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/tags/python/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/tags/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E3%82%A8%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/posts/escherization-app/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E3%82%BF%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%B0/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/tags/%E5%8F%AF%E8%A6%96%E5%8C%96/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/categories/%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-site/categories/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2025-12-25T16:41:27+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/tags/three.js/</loc>
     <lastmod>2025-12-19T00:00:00+09:00</lastmod>
@@ -29,13 +50,7 @@
     <loc>http://localhost:1313/my-site/tags/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB/</loc>
     <lastmod>2025-12-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/my-site/categories/%E6%8A%80%E8%A1%93/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/my-site/tags/%E6%95%B0%E5%80%A4%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/</loc>
-    <lastmod>2025-12-19T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/my-site/categories/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2025-12-19T00:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/posts/fractal-planet-generator/</loc>
@@ -76,9 +91,6 @@
   </url><url>
     <loc>http://localhost:1313/my-site/tags/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/</loc>
     <lastmod>2025-12-05T13:50:56+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/my-site/tags/pyodide/</loc>
-    <lastmod>2025-12-05T12:20:14+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-site/posts/python-apps/</loc>
     <lastmod>2025-12-05T12:20:14+09:00</lastmod>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>エッシャー on My Site</title>
+    <link>http://localhost:1313/my-site/tags/%E3%82%A8%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC/</link>
+    <description>Recent content in エッシャー on My Site</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Thu, 25 Dec 2025 16:41:27 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/my-site/tags/%E3%82%A8%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>エッシャー化タイリングアプリ</title>
+      <link>http://localhost:1313/my-site/posts/escherization-app/</link>
+      <pubDate>Thu, 25 Dec 2025 16:41:27 +0900</pubDate>
+      <guid>http://localhost:1313/my-site/posts/escherization-app/</guid>
+      <description>&lt;h2 id=&#34;エッシャー化タイリングアプリ&#34;&gt;エッシャー化タイリングアプリ&lt;/h2&gt;
+&lt;p&gt;輪郭抽出とメッシュ変形を組み合わせ、入力画像をエッシャー風のタイルに変形して敷き詰めるWebアプリです。PyodideでPythonの計算を活かしつつ、Web側で前処理と表示を行っています。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/my-site/python-apps/escherization/&#34;&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;できること&#34;&gt;できること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;画像から輪郭を抽出してタイル形状を生成&lt;/li&gt;
+&lt;li&gt;P1 / P2 / P3 のタイリングパターンで敷き詰め表示&lt;/li&gt;
+&lt;li&gt;パラメータ調整でタイル形状をコントロール&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考文献&#34;&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;エッシャー・マジック―だまし絵の世界を数理で読み解く 2011/1/10 杉原 厚吉 (著)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

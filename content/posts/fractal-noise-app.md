@@ -4,6 +4,7 @@ draft = false
 title = 'フーリエフィルタリングによるフラクタルノイズ生成'
 tags = ['フラクタル', '数値シミュレーション', '信号処理', 'Python', 'WebGL']
 categories = ['技術', '数学']
+cover = { image = "/my-site/images/fractal-noise-cover.png", alt = "フラクタルノイズ生成のキャッチ画像" }
 +++
 
 ## フラクタルノイズ生成アプリ

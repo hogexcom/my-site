@@ -19,6 +19,13 @@ const apps: AppInfo[] = [
     icon: '🔬'
   },
   {
+    id: 'escherization',
+    title: 'Escherization (Contour Prep Test)',
+    description: '画像から輪郭抽出→CCW統一→平行四辺形ベクトル算出（prepare_contour_for_escherization相当）のテスト。',
+    path: `${BASE_URL}escherization/`,
+    icon: '🌀'
+  },
+  {
     id: 'fractal-music',
     title: 'Fractal Music Generator',
     description: 'フラクタル理論（1/fノイズ）に基づく自動作曲。Hurst指数を調整して、変化に富んだメロディや滑らかなメロディを生成。',

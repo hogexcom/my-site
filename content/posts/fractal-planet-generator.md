@@ -4,6 +4,7 @@ draft = false
 title = '断層線アルゴリズムによるフラクタル惑星生成'
 tags = ['フラクタル', '数値シミュレーション', 'Python', 'Three.js', 'WebGL', 'webapp']
 categories = ['技術', '数学']
+cover = { image = "/my-site/images/terrain_texture_default.jpg", alt = "フラクタル惑星の地形テクスチャ" }
 +++
 
 ## フラクタル惑星生成アプリ

@@ -23,6 +23,19 @@ jobs:
         with:
           hugo-version: 'latest'
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web_python/package-lock.json
+
+      - name: Build web_python (Vite)
+        working-directory: web_python
+        run: |
+          npm ci
+          npm run build
+
       - name: Build
         run: hugo --minify
 
