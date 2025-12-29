@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技術 on My Site</title><link>https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on My Site</description><generator>Hugo -- 0.153.2</generator><language>ja-JP</language><lastBuildDate>Thu, 25 Dec 2025 16:41:27 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>エッシャー化</title><link>https://hogexcom.github.io/my-site/posts/escherization-app/</link><pubDate>Thu, 25 Dec 2025 16:41:27 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/escherization-app/</guid><description>&lt;h2 id="エッシャー化アプリ"&gt;エッシャー化アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技術 on My Site</title><link>https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/</link><description>Recent content in 技術 on My Site</description><generator>Hugo -- 0.153.4</generator><language>ja-JP</language><lastBuildDate>Thu, 25 Dec 2025 16:41:27 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>エッシャー化</title><link>https://hogexcom.github.io/my-site/posts/escherization-app/</link><pubDate>Thu, 25 Dec 2025 16:41:27 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/escherization-app/</guid><description>&lt;h2 id="エッシャー化アプリ"&gt;エッシャー化アプリ&lt;/h2&gt;
 &lt;p&gt;輪郭抽出とメッシュ変形を組み合わせ、入力画像をエッシャー風のタイルに変形して敷き詰めるWebアプリです。PyodideでPythonの計算を活かしつつ、Web側で前処理と表示を行っています。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/escherization/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="できること"&gt;できること&lt;/h2&gt;
@@ -15,6 +15,7 @@
 &lt;li&gt;ASAP（As Similar As Possible）で境界に追従するようメッシュを変形&lt;/li&gt;
 &lt;li&gt;変形したタイルをタイリングして表示&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img alt="エッシャー化の仕組み図解" loading="lazy" src="https://hogexcom.github.io/my-site/images/escherization-diagram.png"&gt;&lt;/p&gt;
 &lt;h2 id="パターンの違い"&gt;パターンの違い&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;P1&lt;/strong&gt;: 平行移動のみのシンプルなタイリング&lt;/li&gt;
@@ -40,13 +41,15 @@
 &lt;h3 id="基本原理"&gt;基本原理&lt;/h3&gt;
 &lt;p&gt;球面上での断層線アルゴリズムは以下のステップで動作します：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;球の中心を通る平面をランダムに生成&lt;/li&gt;
 &lt;li&gt;この平面と球面の交線が「断層線」となる&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="断層線アルゴリズムの仕組み" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-planet-diagram.png"&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;地形の変位&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -86,10 +89,7 @@ $$&lt;/p&gt;
 &lt;p&gt;総合的な高度：
 $$
 H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r})
-$$&lt;/p&gt;
-&lt;h3 id="座標系の変換"&gt;座標系の変換&lt;/h3&gt;
-&lt;h4 id="球面座標から直交座標への変換"&gt;球面座標から直交座標への変換&lt;/h4&gt;
-&lt;p&gt;経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：&lt;/p&gt;</description></item><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
+$$&lt;/p&gt;</description></item><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルノイズを生成し、1D波形・2D高さマップ・レイマーチング可視化を行うWebアプリケーションを作成しました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-noise/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="フラクタルノイズとは"&gt;フラクタルノイズとは&lt;/h2&gt;
@@ -126,6 +126,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id="フーリエフィルタリング法の原理"&gt;フーリエフィルタリング法の原理&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法は、以下の手順でフラクタルノイズを生成します：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="フーリエフィルタリング法の図解" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-noise-diagram.png"&gt;&lt;/p&gt;
 &lt;h3 id="1-周波数領域での構成"&gt;1. 周波数領域での構成&lt;/h3&gt;
 &lt;p&gt;各周波数成分$k$に対して、フーリエ係数$A_k$を以下のように設定：&lt;/p&gt;
 &lt;p&gt;$$
@@ -171,6 +172,7 @@ $$&lt;/p&gt;
 &lt;li&gt;ゆっくり変化しすぎる 1/f²&lt;br&gt;
 の“ちょうど中間”にあるのが 1/f であり、人間の感性に一番フィットします。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="1/fノイズのスペクトル比較" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-music-spectrum.png"&gt;&lt;/p&gt;
 &lt;h2 id="なぜフラクタルから音楽が作れるのか"&gt;なぜフラクタルから音楽が作れるのか&lt;/h2&gt;
 &lt;p&gt;1/f ノイズの性質を理解すると、&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;フラクタル構造を持つ信号そのものが「音楽の骨格」として使える&lt;/strong&gt;&lt;br&gt;
@@ -185,6 +187,4 @@ $$&lt;/p&gt;
 &lt;li&gt;Web Audio API でリアルタイム再生&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という仕組みを使って
-ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;
-&lt;p&gt;このアプローチにより、&lt;br&gt;
-**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description></item></channel></rss>
+ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;</description></item></channel></rss>

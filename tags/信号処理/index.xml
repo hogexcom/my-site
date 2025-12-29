@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>信号処理 on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/</link><description>Recent content in 信号処理 on My Site</description><generator>Hugo -- 0.153.2</generator><language>ja-JP</language><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>信号処理 on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/</link><description>Recent content in 信号処理 on My Site</description><generator>Hugo -- 0.153.4</generator><language>ja-JP</language><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>フーリエフィルタリングによるフラクタルノイズ生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-noise-app/</guid><description>&lt;h2 id="フラクタルノイズ生成アプリ"&gt;フラクタルノイズ生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルノイズを生成し、1D波形・2D高さマップ・レイマーチング可視化を行うWebアプリケーションを作成しました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-noise/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="フラクタルノイズとは"&gt;フラクタルノイズとは&lt;/h2&gt;
@@ -35,6 +35,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id="フーリエフィルタリング法の原理"&gt;フーリエフィルタリング法の原理&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法は、以下の手順でフラクタルノイズを生成します：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="フーリエフィルタリング法の図解" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-noise-diagram.png"&gt;&lt;/p&gt;
 &lt;h3 id="1-周波数領域での構成"&gt;1. 周波数領域での構成&lt;/h3&gt;
 &lt;p&gt;各周波数成分$k$に対して、フーリエ係数$A_k$を以下のように設定：&lt;/p&gt;
 &lt;p&gt;$$

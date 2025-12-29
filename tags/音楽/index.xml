@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>音楽 on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E9%9F%B3%E6%A5%BD/</link><description>Recent content in 音楽 on My Site</description><generator>Hugo -- 0.153.2</generator><language>ja-JP</language><lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E9%9F%B3%E6%A5%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>フラクタル音楽生成アプリを作りました</title><link>https://hogexcom.github.io/my-site/posts/fractal-music-app/</link><pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-music-app/</guid><description>&lt;h2 id="フラクタル音楽生成アプリ"&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>音楽 on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E9%9F%B3%E6%A5%BD/</link><description>Recent content in 音楽 on My Site</description><generator>Hugo -- 0.153.4</generator><language>ja-JP</language><lastBuildDate>Sun, 30 Nov 2025 19:31:32 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E9%9F%B3%E6%A5%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>フラクタル音楽生成アプリを作りました</title><link>https://hogexcom.github.io/my-site/posts/fractal-music-app/</link><pubDate>Sun, 30 Nov 2025 19:31:32 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-music-app/</guid><description>&lt;h2 id="フラクタル音楽生成アプリ"&gt;フラクタル音楽生成アプリ&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法を使用してフラクタルな音楽を生成するWebアプリケーションを作成しました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-music/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id="フラクタル音楽とは何か"&gt;フラクタル音楽とは何か&lt;/h1&gt;
@@ -31,6 +31,7 @@
 &lt;li&gt;ゆっくり変化しすぎる 1/f²&lt;br&gt;
 の“ちょうど中間”にあるのが 1/f であり、人間の感性に一番フィットします。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="1/fノイズのスペクトル比較" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-music-spectrum.png"&gt;&lt;/p&gt;
 &lt;h2 id="なぜフラクタルから音楽が作れるのか"&gt;なぜフラクタルから音楽が作れるのか&lt;/h2&gt;
 &lt;p&gt;1/f ノイズの性質を理解すると、&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;フラクタル構造を持つ信号そのものが「音楽の骨格」として使える&lt;/strong&gt;&lt;br&gt;
@@ -45,6 +46,4 @@
 &lt;li&gt;Web Audio API でリアルタイム再生&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という仕組みを使って
-ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;
-&lt;p&gt;このアプローチにより、&lt;br&gt;
-**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description></item></channel></rss>
+ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pyodide on My Site</title><link>https://hogexcom.github.io/my-site/tags/pyodide/</link><description>Recent content in Pyodide on My Site</description><generator>Hugo -- 0.153.2</generator><language>ja-JP</language><lastBuildDate>Thu, 25 Dec 2025 16:41:27 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/pyodide/index.xml" rel="self" type="application/rss+xml"/><item><title>エッシャー化</title><link>https://hogexcom.github.io/my-site/posts/escherization-app/</link><pubDate>Thu, 25 Dec 2025 16:41:27 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/escherization-app/</guid><description>&lt;h2 id="エッシャー化アプリ"&gt;エッシャー化アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pyodide on My Site</title><link>https://hogexcom.github.io/my-site/tags/pyodide/</link><description>Recent content in Pyodide on My Site</description><generator>Hugo -- 0.153.4</generator><language>ja-JP</language><lastBuildDate>Thu, 25 Dec 2025 16:41:27 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/pyodide/index.xml" rel="self" type="application/rss+xml"/><item><title>エッシャー化</title><link>https://hogexcom.github.io/my-site/posts/escherization-app/</link><pubDate>Thu, 25 Dec 2025 16:41:27 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/escherization-app/</guid><description>&lt;h2 id="エッシャー化アプリ"&gt;エッシャー化アプリ&lt;/h2&gt;
 &lt;p&gt;輪郭抽出とメッシュ変形を組み合わせ、入力画像をエッシャー風のタイルに変形して敷き詰めるWebアプリです。PyodideでPythonの計算を活かしつつ、Web側で前処理と表示を行っています。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/escherization/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="できること"&gt;できること&lt;/h2&gt;
@@ -15,6 +15,7 @@
 &lt;li&gt;ASAP（As Similar As Possible）で境界に追従するようメッシュを変形&lt;/li&gt;
 &lt;li&gt;変形したタイルをタイリングして表示&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img alt="エッシャー化の仕組み図解" loading="lazy" src="https://hogexcom.github.io/my-site/images/escherization-diagram.png"&gt;&lt;/p&gt;
 &lt;h2 id="パターンの違い"&gt;パターンの違い&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;P1&lt;/strong&gt;: 平行移動のみのシンプルなタイリング&lt;/li&gt;

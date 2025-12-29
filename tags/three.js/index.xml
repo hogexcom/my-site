@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Three.js on My Site</title><link>https://hogexcom.github.io/my-site/tags/three.js/</link><description>Recent content in Three.js on My Site</description><generator>Hugo -- 0.153.2</generator><language>ja-JP</language><lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/three.js/index.xml" rel="self" type="application/rss+xml"/><item><title>断層線アルゴリズムによるフラクタル惑星生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</guid><description>&lt;h2 id="フラクタル惑星生成アプリ"&gt;フラクタル惑星生成アプリ&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Three.js on My Site</title><link>https://hogexcom.github.io/my-site/tags/three.js/</link><description>Recent content in Three.js on My Site</description><generator>Hugo -- 0.153.4</generator><language>ja-JP</language><lastBuildDate>Fri, 19 Dec 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/three.js/index.xml" rel="self" type="application/rss+xml"/><item><title>断層線アルゴリズムによるフラクタル惑星生成</title><link>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/fractal-planet-generator/</guid><description>&lt;h2 id="フラクタル惑星生成アプリ"&gt;フラクタル惑星生成アプリ&lt;/h2&gt;
 &lt;p&gt;ランダムな断層線（大円）を累積的に配置することで、リアルな地形を持つフラクタル惑星を生成するWebアプリケーションを作成しました。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/fractal-planet/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id="断層線アルゴリズムとは"&gt;断層線アルゴリズムとは&lt;/h2&gt;
@@ -6,13 +6,15 @@
 &lt;h3 id="基本原理"&gt;基本原理&lt;/h3&gt;
 &lt;p&gt;球面上での断層線アルゴリズムは以下のステップで動作します：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;球の中心を通る平面をランダムに生成&lt;/li&gt;
 &lt;li&gt;この平面と球面の交線が「断層線」となる&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="断層線アルゴリズムの仕組み" loading="lazy" src="https://hogexcom.github.io/my-site/images/fractal-planet-diagram.png"&gt;&lt;/p&gt;
+&lt;ol start="2"&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;地形の変位&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -52,7 +54,4 @@ $$&lt;/p&gt;
 &lt;p&gt;総合的な高度：
 $$
 H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r})
-$$&lt;/p&gt;
-&lt;h3 id="座標系の変換"&gt;座標系の変換&lt;/h3&gt;
-&lt;h4 id="球面座標から直交座標への変換"&gt;球面座標から直交座標への変換&lt;/h4&gt;
-&lt;p&gt;経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：&lt;/p&gt;</description></item></channel></rss>
+$$&lt;/p&gt;</description></item></channel></rss>
