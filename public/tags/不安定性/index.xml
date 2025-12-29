@@ -87,6 +87,7 @@
 &lt;p&gt;隙間幅 $b(t)$ が時間的に変化する場合、質量保存則から追加の項が現れます：&lt;/p&gt;
 &lt;p&gt;$$\frac{\partial b}{\partial t} + \nabla \cdot (b \mathbf{v}) = 0$$&lt;/p&gt;
 &lt;p&gt;隙間が広がると、周囲から流体が吸い込まれ、気泡の界面に不安定性が生じます。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;隙間拡大ヘレショウセルの仕組み&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-site/images/hele-shaw-gap-diagram.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;saffman-taylor-不安定性&#34;&gt;Saffman-Taylor 不安定性&lt;/h2&gt;
 &lt;p&gt;粘性の高い流体が粘性の低い流体に押し出されるとき、界面は不安定になり「指」のようなパターンを形成します。これはSaffman-Taylor不安定性として知られています。&lt;/p&gt;
 &lt;h3 id=&#34;不安定性の条件&#34;&gt;不安定性の条件&lt;/h3&gt;

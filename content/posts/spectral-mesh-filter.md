@@ -5,7 +5,7 @@ draft: false
 tags: ["3D", "信号処理", "数学", "WebApp"]
 categories: ["技術"]
 summary: "3Dメッシュを周波数成分に分解し、音声のイコライザーのようにフィルタリングできるWebアプリを作りました。"
-cover: { image: "/my-site/images/spectral-mesh.png", alt: "スペクトルメッシュのキャッチ画像" }
+cover: { image: "/my-site/images/spectral-mesh-cover.png", alt: "スペクトルメッシュのキャッチ画像" }
 ---
 
 ## はじめに
@@ -68,6 +68,8 @@ $$f'(v_i) = \sum_k h(\omega_k) \cdot \hat{f}_k \cdot H_k(v_i)$$
 - **ローパスフィルター**: 高周波をカット → なめらかに
 - **ハイパスフィルター**: 低周波を抑制 → ディテールを強調
 - **カスタムカーブ**: 任意の周波数応答を設計
+
+![フィルタリング比較](/my-site/images/spectral-mesh-filter-comparison.png)
 
 ## 実装について
 

@@ -21,13 +21,15 @@
 &lt;h3 id=&#34;基本原理&#34;&gt;基本原理&lt;/h3&gt;
 &lt;p&gt;球面上での断層線アルゴリズムは以下のステップで動作します：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;ランダムな大円の生成&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;球の中心を通る平面をランダムに生成&lt;/li&gt;
 &lt;li&gt;この平面と球面の交線が「断層線」となる&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;断層線アルゴリズムの仕組み&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-site/images/fractal-planet-diagram.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;地形の変位&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -67,10 +69,7 @@ $$&lt;/p&gt;
 &lt;p&gt;総合的な高度：
 $$
 H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r})
-$$&lt;/p&gt;
-&lt;h3 id=&#34;座標系の変換&#34;&gt;座標系の変換&lt;/h3&gt;
-&lt;h4 id=&#34;球面座標から直交座標への変換&#34;&gt;球面座標から直交座標への変換&lt;/h4&gt;
-&lt;p&gt;経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：&lt;/p&gt;</description>
+$$&lt;/p&gt;</description>
     </item>
     <item>
       <title>フーリエフィルタリングによるフラクタルノイズ生成</title>
@@ -114,6 +113,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;フーリエフィルタリング法の原理&#34;&gt;フーリエフィルタリング法の原理&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法は、以下の手順でフラクタルノイズを生成します：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;フーリエフィルタリング法の図解&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-site/images/fractal-noise-diagram.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-周波数領域での構成&#34;&gt;1. 周波数領域での構成&lt;/h3&gt;
 &lt;p&gt;各周波数成分$k$に対して、フーリエ係数$A_k$を以下のように設定：&lt;/p&gt;
 &lt;p&gt;$$
@@ -166,6 +166,7 @@ $$&lt;/p&gt;
 &lt;li&gt;ゆっくり変化しすぎる 1/f²&lt;br&gt;
 の“ちょうど中間”にあるのが 1/f であり、人間の感性に一番フィットします。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;1/fノイズのスペクトル比較&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-site/images/fractal-music-spectrum.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;なぜフラクタルから音楽が作れるのか&#34;&gt;なぜフラクタルから音楽が作れるのか&lt;/h2&gt;
 &lt;p&gt;1/f ノイズの性質を理解すると、&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;フラクタル構造を持つ信号そのものが「音楽の骨格」として使える&lt;/strong&gt;&lt;br&gt;
@@ -180,9 +181,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Web Audio API でリアルタイム再生&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;という仕組みを使って
-ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;
-&lt;p&gt;このアプローチにより、&lt;br&gt;
-**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。&lt;/p&gt;</description>
+ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -27,6 +27,8 @@ cover = { image = "/my-site/images/escherization-cover.png", alt = "エッシャ
 4. ASAP（As Similar As Possible）で境界に追従するようメッシュを変形  
 5. 変形したタイルをタイリングして表示  
 
+![エッシャー化の仕組み図解](/my-site/images/escherization-diagram.png)
+
 ## パターンの違い
 
 - **P1**: 平行移動のみのシンプルなタイリング  

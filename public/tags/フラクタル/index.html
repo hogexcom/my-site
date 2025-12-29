@@ -119,7 +119,7 @@
 
 <article class="post-entry tag-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/my-site/images/terrain_texture_default.jpg" alt="フラクタル惑星の地形テクスチャ">
+        <img loading="lazy" src="http://localhost:1313/my-site/images/fractal-planet-cover.png" alt="フラクタル惑星の地形テクスチャ">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">断層線アルゴリズムによるフラクタル惑星生成
@@ -130,8 +130,7 @@
 アプリを試す →
 断層線アルゴリズムとは 断層線アルゴリズム（Fault Line Algorithm）は、地形生成の古典的な手法の一つで、地質学的な断層運動を模倣することでフラクタル的な地形を作り出します。
 基本原理 球面上での断層線アルゴリズムは以下のステップで動作します：
-ランダムな大円の生成
-球の中心を通る平面をランダムに生成 この平面と球面の交線が「断層線」となる 地形の変位
+ランダムな大円の生成 球の中心を通る平面をランダムに生成 この平面と球面の交線が「断層線」となる 地形の変位
 断層線の両側で高度を上下させる 片側を&#43;d、反対側を-dだけ変位 反復処理
 このプロセスを数百回繰り返す 各断層の変位量は一定または減衰 フラクタル地形の生成
 多数の断層が重なることで複雑な地形が形成される 自然な山脈、平野、海洋が現れる 数学的定式化 球面上の点 $\mathbf{r} = (x, y, z)$（単位球上）と、ランダムな単位法線ベクトル $\mathbf{n} = (n_x, n_y, n_z)$ について：
@@ -139,7 +138,6 @@
 点 $\mathbf{r}$ がどちら側にあるかは内積の符号で判定： $$ \text{side}(\mathbf{r}) = \text{sign}(\mathbf{n} \cdot \mathbf{r}) $$
 $i$ 回目の断層による高度変化： $$ h_i(\mathbf{r}) = d_i \cdot \text{side}_i(\mathbf{r}) $$
 総合的な高度： $$ H(\mathbf{r}) = \sum_{i=1}^{N} h_i(\mathbf{r}) $$
-座標系の変換 球面座標から直交座標への変換 経度 $\lambda \in [-\pi, \pi]$、緯度 $\phi \in [-\pi/2, \pi/2]$ として：
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-12-19 00:00:00 +0900 JST'>December 19, 2025</span></footer>
@@ -180,7 +178,7 @@ $P_k = |k|^{-\beta}$：目標とするパワースペクトル密度 $\phi_k$：
 
 <article class="post-entry tag-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/my-site/images/fractal-music.png" alt="フラクタル音楽生成のキャッチ画像">
+        <img loading="lazy" src="http://localhost:1313/my-site/images/fractal-music-cover.png" alt="フラクタル音楽生成のキャッチ画像">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">フラクタル音楽生成アプリを作りました
@@ -207,8 +205,6 @@ $P_k = |k|^{-\beta}$：目標とするパワースペクトル密度 $\phi_k$：
 フラクタル数学を使って音楽を生成できる。
 今回のフラクタル音楽生成アプリでは、
 周波数領域で 1/f などのスペクトルを作り 逆フーリエ変換で時間領域へ戻し Web Audio API でリアルタイム再生 という仕組みを使って ホワイトノイズ／1/f ノイズ／1/f² ノイズの変動に対応する音響を生成しています。
-このアプローチにより、
-**自然な揺らぎ・ランダム性・規則性が混在した「フラクタル音楽」**を体験できます。
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-11-30 19:31:32 +0900 JST'>November 30, 2025</span></footer>

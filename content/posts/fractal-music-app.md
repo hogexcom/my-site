@@ -4,7 +4,7 @@ draft = false
 title = 'フラクタル音楽生成アプリを作りました'
 tags = ['フラクタル', '音楽']
 categories = ['技術']
-cover = { image = "/my-site/images/fractal-music.png", alt = "フラクタル音楽生成のキャッチ画像" }
+cover = { image = "/my-site/images/fractal-music-cover.png", alt = "フラクタル音楽生成のキャッチ画像" }
 +++
 
 ## フラクタル音楽生成アプリ
@@ -47,6 +47,9 @@ cover = { image = "/my-site/images/fractal-music.png", alt = "フラクタル音
 - ランダムすぎる白色ノイズ  
 - ゆっくり変化しすぎる 1/f²  
 の“ちょうど中間”にあるのが 1/f であり、人間の感性に一番フィットします。
+
+![1/fノイズのスペクトル比較](/my-site/images/fractal-music-spectrum.png)
+
 
 
 ## なぜフラクタルから音楽が作れるのか

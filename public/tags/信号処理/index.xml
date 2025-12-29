@@ -50,6 +50,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;フーリエフィルタリング法の原理&#34;&gt;フーリエフィルタリング法の原理&lt;/h2&gt;
 &lt;p&gt;フーリエフィルタリング法は、以下の手順でフラクタルノイズを生成します：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;フーリエフィルタリング法の図解&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/my-site/images/fractal-noise-diagram.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-周波数領域での構成&#34;&gt;1. 周波数領域での構成&lt;/h3&gt;
 &lt;p&gt;各周波数成分$k$に対して、フーリエ係数$A_k$を以下のように設定：&lt;/p&gt;
 &lt;p&gt;$$

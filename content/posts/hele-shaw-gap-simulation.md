@@ -21,6 +21,8 @@ $$\frac{\partial b}{\partial t} + \nabla \cdot (b \mathbf{v}) = 0$$
 
 隙間が広がると、周囲から流体が吸い込まれ、気泡の界面に不安定性が生じます。
 
+![隙間拡大ヘレショウセルの仕組み](/my-site/images/hele-shaw-gap-diagram.png)
+
 ## Saffman-Taylor 不安定性
 
 粘性の高い流体が粘性の低い流体に押し出されるとき、界面は不安定になり「指」のようなパターンを形成します。これはSaffman-Taylor不安定性として知られています。

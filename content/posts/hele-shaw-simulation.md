@@ -4,7 +4,7 @@ draft = false
 title = 'ヘレショウセル流れの数値シミュレーション'
 tags = ['ヘレショウ', '流体力学', 'MFS', '数値シミュレーション', 'Python']
 categories = ['プロジェクト', '数学']
-cover = { image = "/my-site/images/hele-shaw.png", alt = "ヘレショウセルのキャッチ画像" }
+cover = { image = "/my-site/images/hele-shaw-cover.png", alt = "ヘレショウセルのキャッチ画像" }
 +++
 
 ## ヘレショウセルとは
@@ -28,6 +28,8 @@ $$p = \sigma \kappa$$
 ## 基本解近似解法（MFS）
 
 このシミュレーションでは基本解近似解法（Method of Fundamental Solutions）を使用しています。MFSはメッシュ不要の数値解法で、極源点を領域外に配置して解を近似します。
+
+![MFS法の概念図](/my-site/images/hele-shaw-mfs.png)
 
 ### アルゴリズム
 
