@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>シダ on My Site</title><link>https://hogexcom.github.io/my-site/tags/%E3%82%B7%E3%83%80/</link><description>Recent content in シダ on My Site</description><generator>Hugo -- 0.154.5</generator><language>ja-JP</language><lastBuildDate>Fri, 16 Jan 2026 17:45:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/tags/%E3%82%B7%E3%83%80/index.xml" rel="self" type="application/rss+xml"/><item><title>IFSシダ編集アプリ</title><link>https://hogexcom.github.io/my-site/posts/ifs-fern-app/</link><pubDate>Fri, 16 Jan 2026 17:45:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/ifs-fern-app/</guid><description>&lt;h2 id="ifsシダ編集アプリ"&gt;IFSシダ編集アプリ&lt;/h2&gt;
+&lt;p&gt;線形写像のパラメータを調整して、IFS（反復関数系）によるフラクタル図形「バーンズリーのシダ」を生成・変形できるWebアプリです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/python-apps/ifs-fern/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="できること"&gt;できること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;シダを構成する4つの線形写像のパラメータ（確率、係数行列、平行移動ベクトル）を直接編集&lt;/li&gt;
+&lt;li&gt;リアルタイムでの形状プレビュー&lt;/li&gt;
+&lt;li&gt;プリセット値へのリセット機能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ifsiterated-function-systemとは"&gt;IFS（Iterated Function System）とは&lt;/h2&gt;
+&lt;p&gt;IFS（反復関数系）は、自己相似なフラクタル図形を生成するための数学的な手法の一つです。
+全体が部分と相似になるような複数の縮小写像 $f_1, f_2, \dots, f_N$ のセットによって定義されます。
+点 $x_0$ から始めて、ランダムに確率 $p_i$ で写像 $f_i$ を選び、
+$x_{k+1} = f_i(x_k)$
+という操作を繰り返して点を打っていくと、最終的に一定の図形（アトラクタ）が浮かび上がります。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IFSの仕組み図解" loading="lazy" src="https://hogexcom.github.io/my-site/images/ifs-fern-ui.png"&gt;&lt;/p&gt;
+&lt;h2 id="バーンズリーのシダ"&gt;バーンズリーのシダ&lt;/h2&gt;
+&lt;p&gt;有名な「バーンズリーのシダ」は、実はたった4つのアフィン変換の組み合わせで作られています。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;茎&lt;/strong&gt;: 非常に細長く縮小して、底に配置する写像（確率1%）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;小さい葉&lt;/strong&gt;: 小さく縮小して左側に配置する写像（確率85%）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大きい葉&lt;/strong&gt;: 少し回転させて右側に大きく配置する写像（確率7%）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先端&lt;/strong&gt;: 全体を少し縮小して上部に配置する写像（確率7%）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;このアプリでは、これらの変換行列を自由に書き換えて、「自分だけのシダ」や全く異なるフラクタル図形を作って遊ぶことができます。&lt;/p&gt;
+&lt;h2 id="実装について"&gt;実装について&lt;/h2&gt;
+&lt;p&gt;PythonのNumPyを使って高速に点列計算を行い、Pyodideを使ってブラウザ上でPythonコードを実行しています。
+描画結果はCanvasにプロットされます。&lt;/p&gt;</description></item></channel></rss>
