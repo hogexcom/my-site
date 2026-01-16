@@ -67,6 +67,27 @@ const apps: AppInfo[] = [
     path: `${BASE_URL}fractal-planet/`,
     icon: '🌍'
   },
+  {
+    id: 'linear-map',
+    title: 'Linear Map Visualizer',
+    description: '単位ベクトルをドラッグして線型写像を決定し、平行四辺形グリッドの変形と行列式を可視化。',
+    path: `${BASE_URL}linear-map/`,
+    icon: '📐'
+  },
+  {
+    id: 'ifs-fern',
+    title: 'IFS Barnsley Fern',
+    description: 'Pyodide上でIFSを計算し、Barnsleyシダをキャンバスに描画します。',
+    path: `${BASE_URL}ifs-fern/`,
+    icon: '🌿'
+  },
+  {
+    id: 'level-set-ns',
+    title: 'Level Set + Navier-Stokes (WebGPU)',
+    description: 'Level Set移流・再初期化・速度外挿・投影法をWebGPUで実行し、自由表面流れを可視化します。',
+    path: `${BASE_URL}level-set-ns/`,
+    icon: '🧪'
+  },
   // 新しいアプリはここに追加
 ]
 

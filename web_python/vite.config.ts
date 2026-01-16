@@ -30,6 +30,9 @@ export default defineConfig({
         'hele-shaw': resolve(__dirname, 'hele-shaw/index.html'),
         'hele-shaw-gap': resolve(__dirname, 'hele-shaw-gap/index.html'),
         'viscous-fingering': resolve(__dirname, 'viscous-fingering/index.html'),
+        'linear-map': resolve(__dirname, 'linear-map/index.html'),
+        'ifs-fern': resolve(__dirname, 'ifs-fern/index.html'),
+        'level-set-ns': resolve(__dirname, 'level-set-ns/index.html'),
       },
       output: {
         // コード分割設定

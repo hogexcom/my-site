@@ -1,0 +1,58 @@
+.app-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #151b24, #0b0f14 55%);
+  color: #e6edf3;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: #8b949e;
+  margin: 0 0 0.5rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: #9aa4b2;
+  font-size: 0.95rem;
+  max-width: 560px;
+}
+
+@media (max-width: 960px) {
+  .app-container {
+    padding: 1.5rem;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1.25rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.6rem;
+  }
+}

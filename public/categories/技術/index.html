@@ -119,6 +119,27 @@
 
 <article class="post-entry tag-entry"> 
 <figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/my-site/images/ifs-fern-cover.png" alt="バーンズリーのシダのIFSフラクタル">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">IFSシダ編集アプリ
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>IFSシダ編集アプリ 線形写像のパラメータを調整して、IFS（反復関数系）によるフラクタル図形「バーンズリーのシダ」を生成・変形できるWebアプリです。
+アプリを試す →
+できること シダを構成する4つの線形写像のパラメータ（確率、係数行列、平行移動ベクトル）を直接編集 リアルタイムでの形状プレビュー プリセット値へのリセット機能 IFS（Iterated Function System）とは IFS（反復関数系）は、自己相似なフラクタル図形を生成するための数学的な手法の一つです。 全体が部分と相似になるような複数の縮小写像 $f_1, f_2, \dots, f_N$ のセットによって定義されます。 点 $x_0$ から始めて、ランダムに確率 $p_i$ で写像 $f_i$ を選び、 $x_{k&#43;1} = f_i(x_k)$ という操作を繰り返して点を打っていくと、最終的に一定の図形（アトラクタ）が浮かび上がります。
+バーンズリーのシダ 有名な「バーンズリーのシダ」は、実はたった4つのアフィン変換の組み合わせで作られています。
+茎: 非常に細長く縮小して、底に配置する写像（確率1%） 小さい葉: 小さく縮小して左側に配置する写像（確率85%） 大きい葉: 少し回転させて右側に大きく配置する写像（確率7%） 先端: 全体を少し縮小して上部に配置する写像（確率7%） このアプリでは、これらの変換行列を自由に書き換えて、「自分だけのシダ」や全く異なるフラクタル図形を作って遊ぶことができます。
+実装について PythonのNumPyを使って高速に点列計算を行い、Pyodideを使ってブラウザ上でPythonコードを実行しています。 描画結果はCanvasにプロットされます。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-16 17:45:00 +0900 JST'>January 16, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to IFSシダ編集アプリ" href="http://localhost:1313/my-site/posts/ifs-fern-app/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/my-site/images/escherization-cover.png" alt="エッシャー化アプリのキャッチ画像">
 </figure>
   <header class="entry-header">
@@ -246,7 +267,7 @@ $P_k = |k|^{-\beta}$：目標とするパワースペクトル密度 $\phi_k$：
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/my-site/">My Site</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/my-site/">My Site</a></span> · 
 
     <span>
         Powered by
