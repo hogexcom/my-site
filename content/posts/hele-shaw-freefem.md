@@ -1,0 +1,206 @@
+---
+title: "FreeFem++によるヘレショウ流れのシミュレーション"
+date: 2026-01-21T10:00:00+09:00
+draft: false
+tags: ["FreeFem++", "Simulation", "Hele-Shaw"]
+summary: "ヘレショウセル内での定常状態での圧力により、領域が丸まっていく数値計算を有限要素法FreeFem++で実現しました。"
+cover:
+  image: "/my-site/images/hele-shaw-freefem-cover.png"
+  alt: "ヘレショウシミュレーションの可視化"
+---
+
+ヘレショウセル内での定常状態での圧力により、領域が丸まっていく数値計算を有限要素法FreeFem++で実現しました。
+
+## シミュレーション結果
+
+以下はシミュレーション結果の動画です。初期形状から徐々に円形へと緩和していく様子が確認できます。
+
+<video controls width="100%">
+  <source src="/my-site/files/hele-shaw-freefem/heleshaw_freefem.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## FreeFem++コード
+
+使用したFreeFem++のコード (`ヘレショウ問題.edp`) は以下の通りです。
+表面張力による曲率の効果を取り入れ、境界をラグランジュ的に移動させています。
+
+```cpp
+load "Curvature"
+
+ifstream file("pi_border_data.txt");
+int n;
+file >> n; // 点の数を読み込み
+
+// 座標データを格納する配列
+real[int] xdata(n), ydata(n);
+
+// 座標データを読み込み
+for(int i = 0; i < n; i++) {
+    file >> xdata[i] >> ydata[i];
+}
+
+// より安全な線形補間でborderを定義
+border C(u=0,1) {
+    // パラメータを[0,1]に正規化
+    real t = u * (n-1);
+    int k = int(t);
+    real s = t - k;
+    
+    // 境界条件を厳密に処理
+    if(k >= n-1) {
+        k = n-2;
+        s = 1.0;
+    }
+    if(k < 0) {
+        k = 0;
+        s = 0.0;
+    }
+    
+    // 線形補間
+    x = (1-s) * xdata[k] + s * xdata[k+1];
+    y = (1-s) * ydata[k] + s * ydata[k+1];
+    label = 1;
+}
+
+mesh Th = buildmesh(C(200));
+Th = adaptmesh(Th, hmin=0.03, hmax=0.3);
+
+real sigma = 1.0;
+real dt = 0.0005;
+
+for (int i = 0; i < 10000; i++) {
+    fespace Vh(Th, P1);
+    Vh u, v, kb;
+    int[int] labels = [1]; // ラベル1の境界
+    real[int,int] borderdata(1,3); // [x, y, u値]を格納
+    real length = extractborder(Th, labels, borderdata);
+    int nedge = borderdata.m - 1;
+    real[int] tx(nedge), ty(nedge), lenedge(nedge);
+    
+    for (int j = 0; j < nedge; j++) {
+        real ex = borderdata(0, j+1) - borderdata(0, j);
+        real ey = borderdata(1, j+1) - borderdata(1, j);
+        real len = sqrt(ex*ex + ey*ey);
+        if (len <= 0) len = 1e-12;
+        lenedge[j] = len;
+        tx[j] = ex / len;
+        ty[j] = ey / len;
+    }
+
+    real[int] phi(nedge);
+    for (int j = 0; j < nedge; j++) {
+        int j1 = (j + 1) % nedge;
+        // dot product
+        real dot = tx[j] * tx[j1] + ty[j] * ty[j1];
+        // cross product (z-component) to check orientation
+        real cross = tx[j] * ty[j1] - ty[j] * tx[j1];
+        
+        if (dot > 1.0) dot = 1.0;
+        if (dot < -1.0) dot = -1.0;
+        real phival = acos(dot);
+        // If right turn (negative cross product), angle should be negative
+        if (cross < 0) phival = -phival;
+        phi[j] = phival;
+    }
+
+    real[int] kvertex(borderdata.m);
+    for (int j = 0; j < nedge; j++) {
+        int jm = (j - 1 + nedge) % nedge;
+        kvertex[j] = (tan(phi[j] / 2.0) + tan(phi[jm] / 2.0)) / lenedge[j];
+    }
+    kvertex[nedge] = kvertex[0];
+    kb[] = 0;
+
+    // Boundary mapping: Map physical boundary vertices to Vh DOF indices
+    Vh valIndex;
+    for(int k=0; k<Vh.ndof; ++k) valIndex[][k] = k;
+    int[int] bnd(borderdata.m);
+    for(int j=0; j<borderdata.m; ++j) {
+        bnd[j] = int(valIndex(borderdata(0, j), borderdata(1, j)) + 0.5);
+    }
+
+    for (int j = 0; j < bnd.n; j++) {
+        kb[][bnd[j]] = kvertex[j];
+    }
+
+    problem Poisson(u, v)
+        = int2d(Th)(dx(u)*dx(v) + dy(u)*dy(v))
+        + on(1, u = sigma * kb);
+
+    Poisson;
+
+    if (i % 20 == 0) {
+        string filename = "out/heleshaw_" + i + ".ps";
+        plot(Th, u, wait=0, value=true, fill=true, ps=filename, bb=[[-6, -7], [6, 3]]);
+    }
+
+    Vh dux = dx(u);
+    Vh duy = dy(u);
+
+    // 法線微分と頂点法線速度の準備
+    real[int] normalderivative(nedge);
+    for (int j = 0; j < nedge; j++) {
+        real nx = ty[j];
+        real ny = -tx[j];
+        real mx = (borderdata(0, j+1) + borderdata(0, j)) / 2;
+        real my = (borderdata(1, j+1) + borderdata(1, j)) / 2;
+        normalderivative[j] = dux(mx, my) * nx + duy(mx, my) * ny;
+    }
+
+    // 頂点法線速度 V = (v_{j-1} + v_j) / (2 * cos(phi_j/2))
+    real[int] cosi(nedge);
+    real[int] Vvertex(borderdata.m);
+    real[int] nxb(nedge), nyb(nedge);
+    real[int] nxv(borderdata.m), nyv(borderdata.m);
+
+    // Prepare edge normals (for averaging to vertex normal)
+    for (int j = 0; j < nedge; j++) {
+        nxb[j] = ty[j];
+        nyb[j] = -tx[j];
+    }
+
+    for (int j = 0; j < nedge; j++) {
+        int jm = (j - 1 + nedge) % nedge;
+        
+        // Calculate angle at vertex j (between edge jm and edge j)
+        real dot = tx[jm] * tx[j] + ty[jm] * ty[j];
+        real cross = tx[jm] * ty[j] - ty[jm] * tx[j];
+        if (dot > 1.0) dot = 1.0;
+        if (dot < -1.0) dot = -1.0;
+        real phival = acos(dot);
+        if (cross < 0) phival = -phival;
+        
+        cosi[j] = cos(phival / 2.0);
+        if (abs(cosi[j]) < 1e-12) cosi[j] = 1e-12;
+        
+        // Velocity at vertex j uses normal derivatives of edge jm and edge j
+        Vvertex[j] = (normalderivative[jm] + normalderivative[j]) / (2.0 * cosi[j]);
+        
+        // Vertex normal at j
+        real nx = nxb[jm] + nxb[j];
+        real ny = nyb[jm] + nyb[j];
+        real nlen = sqrt(nx*nx + ny*ny);
+        if (nlen <= 0) nlen = 1e-12;
+        nxv[j] = nx / nlen;
+        nyv[j] = ny / nlen;
+    }
+    Vvertex[nedge] = Vvertex[0];
+    nxv[nedge] = nxv[0];
+    nyv[nedge] = nyv[0];
+
+    border B(t=0, borderdata.m-1) {
+        x = borderdata(0, t) - dt * Vvertex[t] * nxv[t];
+        y = borderdata(1, t) - dt * Vvertex[t] * nyv[t];
+        label = 1; // ラベルを設定
+    }
+   
+    Th = buildmesh(B(borderdata.m-1), fixedborder=1);
+    Th = adaptmesh(Th, hmin=0.03, hmax=0.3);
+}
+```
+
+## ダウンロード
+
+- [ソースコード (.edp)](/my-site/files/hele-shaw-freefem/ヘレショウ問題.edp)
+- [境界データ (.txt)](/my-site/files/hele-shaw-freefem/pi_border_data.txt)

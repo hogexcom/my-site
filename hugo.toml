@@ -8,3 +8,8 @@ theme = "PaperMod"
 
 [outputs]
   home = [ "HTML" ]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
