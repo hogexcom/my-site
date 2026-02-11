@@ -4,7 +4,7 @@ draft = false
 title = 'Viscous Fingering（粘性フィンガリング）シミュレーション'
 tags = ['ヘレショウ', '流体力学', 'MFS', 'Saffman-Taylor', '不安定性', 'Python']
 categories = ['プロジェクト', '数学']
-cover = { image = "/my-site/images/viscous-fingering.png", alt = "ビスカスフィンガリングのキャッチ画像" }
+cover = { image = "/my-site/images/viscous-fingering-catch.png", alt = "Viscous Fingering キャッチ画像" }
 +++
 
 ## Viscous Fingering とは

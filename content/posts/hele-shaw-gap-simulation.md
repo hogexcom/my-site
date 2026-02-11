@@ -4,7 +4,7 @@ draft = false
 title = '隙間上昇ヘレショウ流れのシミュレーション'
 tags = ['ヘレショウ', '流体力学', 'MFS', '不安定性', 'Python']
 categories = ['プロジェクト', '数学']
-cover = { image = "/my-site/images/hele-shaw-gap.png", alt = "ヘレショウセルギャップのキャッチ画像" }
+cover = { image = "/my-site/images/hele-shaw-gap-catch.png", alt = "Hele-Shaw Gap キャッチ画像" }
 +++
 
 ## 隙間上昇ヘレショウ流れ
