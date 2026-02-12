@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Web App on My Site</title><link>https://hogexcom.github.io/my-site/categories/web-app/</link><description>Recent content in Web App on My Site</description><generator>Hugo -- 0.155.3</generator><language>ja-JP</language><lastBuildDate>Thu, 12 Feb 2026 17:42:00 +0900</lastBuildDate><atom:link href="https://hogexcom.github.io/my-site/categories/web-app/index.xml" rel="self" type="application/rss+xml"/><item><title>Picture Description</title><link>https://hogexcom.github.io/my-site/posts/picture-description-app/</link><pubDate>Thu, 12 Feb 2026 17:42:00 +0900</pubDate><guid>https://hogexcom.github.io/my-site/posts/picture-description-app/</guid><description>&lt;h2 id="picture-description-app"&gt;Picture Description App&lt;/h2&gt;
+&lt;p&gt;英語のスピーキング練習として、画像を見てその状況を英語で説明する「Picture Description」の練習用Webアプリを作成しました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="https://hogexcom.github.io/my-site/picture-description/"&gt;アプリを試す →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="できること"&gt;できること&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ランダムに表示される画像を見て、その状況を英語で説明する練習ができます。&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Show Answer&amp;rdquo; ボタンを押すと、その画像に対応する英語の例文が表示されます。&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Random&amp;rdquo; ボタンでランダムに別の画像へ切り替えたり、&amp;ldquo;Prev&amp;rdquo; / &amp;ldquo;Next&amp;rdquo; ボタンで順にめくったりできます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;シンプルながらも、毎日の英語学習のルーチンとして使えるように設計しました。&lt;/p&gt;</description></item></channel></rss>
